@@ -1,0 +1,34 @@
+.advantages {
+  /*Hidden Title*/
+  &__title {
+    visibility: hidden;
+
+    position: absolute;
+  }
+  /*END*/
+  &__item-title {
+    font-size: 36px;
+    line-height: 41px;
+
+    margin-bottom: 19px;
+  }
+
+  &__item-description {
+    font-size: 12px;
+    line-height: 170%;
+
+    font-weight: 700;
+  }
+
+  &__item {
+    margin-bottom: 38px;
+  }
+
+  &__item:last-child {
+    margin-bottom: 0;
+  }
+  &__section {
+    padding-top: 39px;
+    padding-bottom: 97px;
+  }
+}
