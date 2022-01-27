@@ -10,6 +10,8 @@
     font-size: 36px;
     line-height: 41px;
 
+    color: $font-accent;
+
     margin-bottom: 19px;
   }
 
@@ -27,8 +29,11 @@
   &__item:last-child {
     margin-bottom: 0;
   }
+
   &__section {
     padding-top: 39px;
     padding-bottom: 97px;
+
+    background-color: $bg-section-secondary;
   }
 }
