@@ -43,7 +43,6 @@ a {
 /*Fonts basick*/
 body {
   font-family: 'DM Sans', sans-serif;
-  font-family: 'Titan One', cursive;
 }
 
 /*Title, ul, li, p - обнулення*/
@@ -68,6 +67,7 @@ li {
 
 /*Title - basick style*/
 .title {
+  font-family: $font-title;
   font-size: 34px;
   line-height: 39px;
   font-weight: 400;
@@ -79,6 +79,7 @@ li {
 
 /*Sub-title*/
 .sub-title {
+  font-family: $font-title;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;

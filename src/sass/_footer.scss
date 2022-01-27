@@ -12,12 +12,19 @@
   text-transform: uppercase;
 }
 .footer__titleOne {
+  width: 232px;
+
   font-size: 18px;
   line-height: 1.16;
 
   color: #ffa5ba;
+
+  @media screen and(max-width: 768px) {
+    margin-bottom: 17px;
+  }
 }
 .footer__titleTwo {
+  width: 200px;
   font-size: 34px;
   line-height: 1.14;
   letter-spacing: 0.04em;
