@@ -1,5 +1,14 @@
 @media (max-width: 480px) {
 
+    .hero-section{
+    background-color: #FFB8CA;}
+    .conteiner{
+        max-width: 480px;
+    }
+    .hero{
+        position: relative;
+    }
+
     .hero-title{
 font-family: Titan One;
 font-style: normal;
@@ -26,7 +35,13 @@ align-items: center;
 text-align: center;
 color: #FFFFFF;
 }
-.hero__maine-img{}
+.hero__maine-img{
+    width: 171px;
+    height: 410px;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 
 
 }

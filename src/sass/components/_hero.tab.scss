@@ -1,6 +1,13 @@
 @media (min-width: 768px) and (max-width: 1279px) {
-    .hero-section{}
-
+    .hero-section{
+        background-color: #FFB8CA;
+    }
+    .conteiner{
+        width: 768px;
+    }
+.hero{
+    position: relative;
+}
 .hero-title{
 font-family: Titan One;
 font-style: normal;
@@ -59,9 +66,26 @@ line-height: 10px;
 text-align: right;
 color: #FFFFFF;
 }
-.hero__bottle-img{}
-.hero__maine-img{}
+.hero__bottle-img{
+    width: 124px;
+    height: 126px; 
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.hero__maine-img{ 
+    width: 143px;
+    height: 336px;
+    display: block;
+    max-width: 100%;
+    height: auto;}
 
-.hero__icecreamgirl-img{}
+.hero__icecreamgirl-img{
+    width: 168px;
+    height: 133px;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 
 }
