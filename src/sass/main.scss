@@ -4,11 +4,13 @@
  */
 
 // Стили для файла с примером HTML-фрагмента
+
 @import './utils/variables';
-@import './base/common';
+@import './utils/breakpoints';
 @import './utils/mixins';
-@import './hero-header';
-// @import './header';
+@import './base/common';
+@import './header';
+@import './hero';
 @import './products';
 @import './about';
 @import './advantages';

@@ -1,0 +1,13 @@
+.button__header {
+  display: inline-block;
+  text-align: center;
+  background-color: $bg-button-first;
+  padding: 20px;
+  width: 209px;
+  height: 44px;
+  border-radius: 22px;
+}
+
+.button__text {
+  color: $font-accent;
+}
