@@ -87,49 +87,50 @@
   }
 }
 
-// Что Это?................................................................................
-// background-color: $bg-content-first;
+.products__item--pink {
+  background-color: $bg-content-first;
 
-&::before {
-  content: '';
-  display: block;
-  background-image: url(../images/products/product1/mob-249.png);
+  &::before {
+    content: '';
+    display: block;
+    background-image: url(../images/products/product1/mob-249.png);
 
-  background-size: 249px 252px;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 10px;
-  left: 50%;
+    background-size: 249px 252px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 10px;
+    left: 50%;
 
-  transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 
-  width: 249px;
-  height: 252px;
+    width: 249px;
+    height: 252px;
 
-  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    background-image: url(../images/products/product1/mob-498@2x.png);
-  }
-
-  @media screen and (min-width: 768px) {
-    background-image: url(../images/products/product1/tab-220.png);
-    background-size: 220px 226px;
-
-    width: 220px;
-    height: 226px;
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url(../images/products/product1/tab-440@2x.png);
+      background-image: url(../images/products/product1/mob-498@2x.png);
     }
-  }
 
-  @media screen and (min-width: 1280px) {
-    background-image: url(../images/products/product1/desc-335.png);
-    background-size: 335px 335px;
+    @media screen and (min-width: 768px) {
+      background-image: url(../images/products/product1/tab-220.png);
+      background-size: 220px 226px;
 
-    top: -9%;
-    width: 335px;
-    height: 335px;
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url(../images/products/product1/desc-670@2x.png);
+      width: 220px;
+      height: 226px;
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url(../images/products/product1/tab-440@2x.png);
+      }
+    }
+
+    @media screen and (min-width: 1280px) {
+      background-image: url(../images/products/product1/desc-335.png);
+      background-size: 335px 335px;
+
+      top: -9%;
+      width: 335px;
+      height: 335px;
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url(../images/products/product1/desc-670@2x.png);
+      }
     }
   }
 }
