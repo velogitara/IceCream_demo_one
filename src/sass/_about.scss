@@ -1,0 +1,59 @@
+.about {
+  background-color: $bg-section-secondary;
+  padding: 40px 0;
+
+  background-origin: border-box;
+  background-image: url(/images/about/bgabout/mob-640@2x.png);
+  background-repeat: no-repeat;
+  background-position: bottom 120px center;
+  background-size: 480px;
+
+  &__title-label {
+    text-align: center;
+    color: $font-label;
+    margin-bottom: 15px;
+  }
+  &__title {
+    text-align: center;
+    color: $font-accent;
+    letter-spacing: 0.04em;
+    margin-bottom: 26px;
+  }
+  &__picture {
+    @include centered;
+    margin-bottom: 46px;
+  }
+
+  &__text {
+    padding: 0 50px;
+    margin-bottom: 47px;
+
+    font-family: 'DM Sans', sans-serif;
+    @include text(12px, 1.62, 500);
+    color: $font-black;
+  }
+  &__text--light {
+    color: $font-grey;
+
+    & .about__paragraph:not(:last-child) {
+      margin-bottom: 19px;
+    }
+  }
+  &__button {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 13px 37px;
+
+    width: 176px;
+    height: 44px;
+
+    font-family: 'DM Sans', sans-serif;
+    @include text(14px, 1.28, 700);
+    color: $font-accent;
+
+    background: $bg-button-first;
+    border-radius: 22px;
+    border-color: transparent;
+  }
+}
