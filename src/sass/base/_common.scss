@@ -2,65 +2,57 @@
 .container {
   /* Responsive */
 
-  margin-right: auto;
-  margin-left: auto;
-
-  padding-right: 20px;
-  padding-left: 20px;
+  margin: 0 auto;
+  padding: 0 20px;
 
   width: 100%;
 
   /* Mobile-adaptive */
 
-  @media screen and (min-width: 480px) {
+  @include respond-to(mobile) {
     & {
       width: 480px;
     }
   }
   /*Tablet*/
-  @media screen and (min-width: 768px) {
+  @include respond-to(tablet) {
     & {
-      padding-right: 34px;
-      padding-left: 34px;
+      padding: 0 34px;
 
       width: 768px;
     }
   }
 
-  /*Deckstop*/
-  @media screen and (min-width: 1280px) {
+  /*Desktop*/
+  @include respond-to(desktop) {
     & {
-      padding-right: 115px;
-      padding-left: 115px;
+      padding: 0 115px;
 
       width: 1280px;
     }
   }
 }
 
-/*IMG*/
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
-/*Link => a*/
-a {
-  text-decoration: none;
-}
 
-/*Fonts basick*/
 body {
   font-family: 'DM Sans', sans-serif;
 }
 
-/*Title, ul, li, p - обнулення*/
 h1,
 h2,
 h3,
+h4,
+h5,
 p,
 ul,
-li {
+li,
+a {
+  text-decoration: none;
   list-style: none;
   margin: 0px;
   padding: 0px;
@@ -74,13 +66,11 @@ li {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-/*Title - basick style*/
+/*Title - basic style*/
 .title {
   font-family: $font-title;
-  font-size: 34px;
-  line-height: 39px;
-  font-weight: 400;
-
+  color: $font-accent;
+  @include text(34px, 1.15);
   letter-spacing: 0.04em;
 
   text-transform: uppercase;
@@ -89,9 +79,26 @@ li {
 /*Sub-title*/
 .sub-title {
   font-family: $font-title;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 21px;
+  color: $font-label;
+  @include text(18px, 1.17);
 
   text-transform: uppercase;
+}
+/* Button-primary (buy-now,read-more,locations,franchise) */
+.btn-primary {
+  @include centered;
+  padding: 13px 37px;
+
+  height: 44px;
+
+  font-family: inherit;
+  @include text(16px, 1.31, 700);
+  color: $font-accent;
+
+  background-color: $bg-button-first;
+
+  border-radius: 22px;
+  border-color: transparent;
+
+  cursor: pointer;
 }
