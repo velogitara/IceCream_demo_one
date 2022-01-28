@@ -1,6 +1,7 @@
 @import '../../node_modules/swiper/swiper-bundle.css';
 .customer-reviews__section {
-  padding-bottom: 80px;
+  padding-bottom: 40px;
+  padding-top: 40px;
 }
 
 .swiper {
@@ -41,8 +42,6 @@
 }
 
 .swiper-slide__comment {
-  width: 180px;
-
   background-image: repeating-linear-gradient(
     to bottom,
     transparent,
@@ -86,3 +85,23 @@
   line-height: 1.86;
   text-align: center;
 }
+
+@media screen and (min-width: 768px) {
+  .customer-reviews__section {
+    padding: 60px 0;
+  }
+  .customer-reviews__container {
+    padding: 0 74px;
+  }
+
+  .swiper-slider__box {
+    padding: 43px 38px 12px;
+  }
+
+  .swiper-slide__comment {
+    margin-top: 0;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    padding: 4px 32px 10px;
+  }
+} ;
