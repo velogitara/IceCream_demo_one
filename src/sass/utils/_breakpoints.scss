@@ -1,20 +1,17 @@
 $breakpoints: (
-   'mobile': (
+  'mobile': (
     min-width: 480px,
   ),
-    'mobile-only': (
+  'mobile-only': (
     max-width: 767px,
   ),
-    'tablet': (
+  'tablet': (
     min-width: 768px,
   ),
-    'tablet-only': (
-    max-width: 1199px,
+  'tablet-only': (
+    max-width: 1279px,
   ),
-    'desktop': (
-    min-width: 1200px,
-  ),
-    'desktop-fhd': (
-    min-width: 1920px,
+  'desktop': (
+    min-width: 1280px,
   ),
 ) !default;
