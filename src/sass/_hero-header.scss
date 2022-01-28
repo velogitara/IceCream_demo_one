@@ -1,3 +1,235 @@
-@import "./components/hero.mob";
-@import "./components/hero.tab";
-@import "./components/hero.des";
+
+@media (max-width: 480px) {
+
+    .hero-section{
+    background-color: #FFB8CA;}
+    .conteiner{
+        max-width: 480px;
+    }
+    .hero{
+        position: relative;
+    }
+
+    .hero-title{
+font-family: Titan One;
+font-style: normal;
+font-weight: normal;
+font-size: 26px;
+line-height: 30px;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+color: #FFFFFF;
+    }
+
+.hero__list{}
+
+.hero__item{}
+
+.hero__button{
+font-family: DM Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 8px;
+line-height: 10px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #FFFFFF;
+}
+.hero__maine-img{
+    width: 171px;
+    height: 410px;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+    .hero-section{
+        background-color: #FFB8CA;
+    }
+    .conteiner{
+        width: 768px;
+    }
+.hero{
+    position: relative;
+}
+.hero-title{
+font-family: Titan One;
+font-style: normal;
+font-weight: normal;
+font-size: 22px;
+line-height: 25px;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+color: #FFFFFF;
+}
+
+.hero__list{}
+
+.hero__item{}
+
+.hero__button{
+font-family: DM Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 8px;
+line-height: 10px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #D41443;
+}
+
+.hero__text{
+font-family: DM Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 8px;
+line-height: 150%;
+color: #FFFFFF;
+}
+
+.box{}
+
+.box__number{
+font-style: normal;
+font-weight: normal;
+font-size: 28px;
+line-height: 32px;
+text-align: right;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+color: #D41443;
+}
+
+.box__text{
+font-family: DM Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 8px;
+line-height: 10px;
+text-align: right;
+color: #FFFFFF;
+}
+.hero__bottle-img{
+    width: 124px;
+    height: 126px; 
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.hero__maine-img{ 
+    width: 143px;
+    height: 336px;
+    display: block;
+    max-width: 100%;
+    height: auto;}
+
+.hero__icecreamgirl-img{
+    width: 168px;
+    height: 133px;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+}
+
+@media (min-width: 1280px) and (max-width: 1920px) {
+.hero-section{
+    background-color: #FFB8CA;
+}
+.conteiner{
+    width: 1280px;
+}
+.hero{
+    position: relative;
+}
+.hero-title{
+font-family: Titan One;
+font-style: normal;
+font-weight: normal;
+font-size: 38px;
+line-height: 44px;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+color: #FFFFFF;
+}
+
+.hero__list{}
+
+.hero__item{}
+
+.hero__button{
+font-family: DM Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 18px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #D41443;
+}
+
+.hero__text{
+font-family: DM Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 140%;
+color: #FFFFFF;
+}
+
+.box{}
+
+.box__number{
+font-family: Titan One;
+font-style: normal;
+font-weight: normal;
+font-size: 46px;
+line-height: 53px;
+text-align: right;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+color: #D41443;
+}
+
+.box__text{
+font-family: DM Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 18px;
+text-align: right;
+color: #FFFFFF;
+}
+.hero__bottle-img{
+    width: 188px;
+    height: 191px;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.hero__maine-img{
+    width: 236px;
+    height: 557px;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.hero__icecreamgirl-img{
+    width: 293px;
+    height: 232px;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    
+}
+
+
+
+}
