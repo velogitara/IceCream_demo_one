@@ -1,0 +1,11 @@
+.about {
+  background-color: $bg-section-secondary;
+  padding: 40px 0;
+  &__text {
+    @include text(12px, 1.62, 500);
+    color: $font-black;
+  }
+  &__text--light {
+    color: $font-grey;
+  }
+}

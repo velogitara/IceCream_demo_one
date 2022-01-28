@@ -1,13 +1,22 @@
 /*Container*/
 .container {
+  /* Responsive */
+
   margin-right: auto;
   margin-left: auto;
 
   padding-right: 20px;
   padding-left: 20px;
 
-  width: 320px;
+  width: 100%;
 
+  /* Mobile-adaptive */
+
+  @media screen and (min-width: 480px) {
+    & {
+      width: 480px;
+    }
+  }
   /*Tablet*/
   @media screen and (min-width: 768px) {
     & {
@@ -43,7 +52,6 @@ a {
 /*Fonts basick*/
 body {
   font-family: 'DM Sans', sans-serif;
-  font-family: 'Titan One', cursive;
 }
 
 /*Title, ul, li, p - обнулення*/
@@ -68,6 +76,7 @@ li {
 
 /*Title - basick style*/
 .title {
+  font-family: $font-title;
   font-size: 34px;
   line-height: 39px;
   font-weight: 400;
@@ -79,6 +88,7 @@ li {
 
 /*Sub-title*/
 .sub-title {
+  font-family: $font-title;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
