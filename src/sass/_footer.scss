@@ -31,10 +31,16 @@
 
   color: #d41443;
 }
-.footer__socialLinks {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
+
+// .footer__socialLinks {
+//   width: 32px;
+//   height: 32px;
+//   border-radius: 50%;
+
+.footer__socialList {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 .footer__socialIcon {
