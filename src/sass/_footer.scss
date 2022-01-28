@@ -30,6 +30,8 @@
   letter-spacing: 0.04em;
 
   color: #d41443;
+
+  margin-bottom: 45px;
 }
 
 // .footer__socialLinks {
@@ -41,9 +43,42 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+
+  margin-bottom: 45px;
+}
+.footer__socialItem {
+  margin-left: 30px;
 }
 
 .footer__socialIcon {
   background-color: #fea5bb;
   border-radius: 50%;
+}
+
+.footer__contacts {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1.83;
+
+  text-align: right;
+
+  color: #000000;
+
+  margin-bottom: 45px;
+}
+
+.footer__contactsLink {
+  color: #d41443;
+}
+
+.footer__copyRight {
+  border-top: 1px solid #e1e1e1;
+  padding: 20px 85px;
+  text-align: center;
+
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.5;
+
+  color: #907e82;
 }
