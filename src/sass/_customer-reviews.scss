@@ -1,0 +1,88 @@
+@import '../../node_modules/swiper/swiper-bundle.css';
+.customer-reviews__section {
+  padding-bottom: 80px;
+}
+
+.swiper {
+  padding-bottom: 20px;
+}
+
+.swiper-slider__box {
+  position: relative;
+  background-color: $bg-reviews;
+  padding: 71px 50px 10px;
+
+  &::before {
+    position: absolute;
+    content: '';
+    background-image: url(../images/slider/swiper_quotes.svg);
+    width: 54px;
+    height: 40px;
+    display: block;
+    top: 30px;
+    left: 68px;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    background-image: url(../images/slider/slider-dots.svg);
+    width: 32px;
+    height: 4px;
+    display: block;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.swiper-slide__image {
+  margin: 0 auto 29px;
+}
+
+.swiper-slide__comment {
+  width: 180px;
+
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 30px,
+    $line 30px,
+    $line 31px
+  );
+
+  padding: 4px 12px 7px;
+  margin: -28px auto 0;
+  font-family: $font-primary;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 31px;
+  text-align: center;
+  position: relative;
+}
+
+.swiper-slider__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 77px;
+  margin-top: 30px;
+}
+
+.swiper-pagination-bullet {
+  background: $markers-slider;
+  opacity: 1;
+  width: 12px;
+  height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+  background: $markers-house;
+}
+
+.swiper-slider__name {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.86;
+  text-align: center;
+}
