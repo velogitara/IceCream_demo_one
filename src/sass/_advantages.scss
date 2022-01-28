@@ -7,6 +7,8 @@
   }
   /*END*/
   &__item-title {
+    position: relative;
+
     font-size: 36px;
     line-height: 41px;
 
@@ -20,9 +22,13 @@
     line-height: 170%;
 
     font-weight: 700;
+
+    color: $font-black;
   }
 
   &__item {
+    padding-top: 50px;
+
     margin-bottom: 38px;
   }
 
@@ -35,5 +41,181 @@
     padding-bottom: 97px;
 
     background-color: $bg-section-secondary;
+  }
+
+  &__item:nth-child(1) &__item-title::before {
+    content: ' ';
+
+    background-image: url(../images/advantages/mobile00.png);
+
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    width: 33px;
+    height: 50px;
+
+    position: absolute;
+
+    top: -66px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(../images/advantages/mobile00_2x.png);
+    }
+  }
+
+  &__item:nth-child(2) &__item-title::before {
+    content: ' ';
+
+    background-image: url(../images/advantages/mobile01.png);
+
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    width: 50px;
+    height: 50px;
+
+    top: -66px;
+
+    position: absolute;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(../images/advantages/mobile01_2x.png);
+    }
+  }
+
+  &__item:nth-child(3) &__item-title::before {
+    content: ' ';
+
+    background-image: url(../images/advantages/mobile02.png);
+
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    width: 44px;
+    height: 50px;
+
+    top: -66px;
+
+    position: absolute;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(../images/advantages/mobile02_2x.png);
+    }
+  }
+}
+
+/*Tablet*/
+@media screen and (min-width: 768px) {
+  .advantages {
+    &__list {
+      display: flex;
+    }
+
+    &__item {
+      width: 180px;
+
+      margin-right: 60px;
+    }
+
+    &__item:last-child {
+      margin-right: 0;
+    }
+
+    &__section {
+      padding-top: 66px;
+      padding-bottom: 140px;
+    }
+
+    &__item-title {
+      font-size: 48px;
+      line-height: 55px;
+
+      margin-bottom: 13px;
+    }
+
+    &__item-description {
+      font-size: 14px;
+      line-height: 174%;
+    }
+
+    &__item:nth-child(1) &__item-title::before {
+      background-image: url(../images/advantages/tablet00.png);
+
+      @media (min-resolution: 2dppx) {
+        background-image: url(../images/advantages/tablet00_2x.png);
+      }
+    }
+
+    &__item:nth-child(2) &__item-title::before {
+      background-image: url(../images/advantages/tablet01.png);
+
+      @media (min-resolution: 2dppx) {
+        background-image: url(../images/advantages/tablet01_2x.png);
+      }
+    }
+
+    &__item:nth-child(3) &__item-title::before {
+      background-image: url(../images/advantages/tablet02.png);
+
+      @media (min-resolution: 2dppx) {
+        background-image: url(../images/advantages/tablet02_2x.png);
+      }
+    }
+  }
+}
+
+/*Deckstop*/
+@media screen and (min-width: 1280px) {
+  .advantages {
+    &__item {
+      width: 330px;
+
+      margin-right: 30px;
+    }
+
+    &__item:last-child {
+      margin-right: 0;
+    }
+
+    &__section {
+      padding-top: 66px;
+      padding-bottom: 140px;
+    }
+
+    &__item-title {
+      font-size: 58px;
+      line-height: 66px;
+
+      margin-bottom: 13px;
+    }
+
+    &__item-description {
+      font-size: 16px;
+      line-height: 176%;
+    }
+
+    &__item:nth-child(1) &__item-title::before {
+      background-image: url(../images/advantages/deckstop00.png);
+
+      @media (min-resolution: 2dppx) {
+        background-image: url(../images/advantages/deckstop00_2x.png);
+      }
+    }
+
+    &__item:nth-child(2) &__item-title::before {
+      background-image: url(../images/advantages/deckstop01.png);
+
+      @media (min-resolution: 2dppx) {
+        background-image: url(../images/advantages/deckstop01_2x.png);
+      }
+    }
+
+    &__item:nth-child(3) &__item-title::before {
+      background-image: url(../images/advantages/deckstop02.png);
+
+      @media (min-resolution: 2dppx) {
+        background-image: url(../images/advantages/deckstop02_2x.png);
+      }
+    }
   }
 }
