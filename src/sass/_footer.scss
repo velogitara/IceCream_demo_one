@@ -1,0 +1,108 @@
+.footer-section {
+  background-color: #fff5f6;
+}
+.footer__container {
+  @include respond-to(tablet) {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+  }
+}
+.footer__title {
+  font-family: Titan One;
+  font-style: normal;
+  font-weight: normal;
+
+  text-transform: uppercase;
+}
+.footer__titleOne {
+  width: 232px;
+
+  font-size: 18px;
+  line-height: 1.16;
+
+  color: #ffa5ba;
+
+  margin-bottom: 17px;
+}
+.footer__titleTwo {
+  width: 200px;
+  font-size: 34px;
+  line-height: 1.14;
+  letter-spacing: 0.04em;
+
+  color: #d41443;
+
+  margin-bottom: 45px;
+}
+
+// .footer__socialLinks {
+//   width: 32px;
+//   height: 32px;
+//   border-radius: 50%;
+
+.footer__socialList {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  margin-bottom: 45px;
+}
+.footer__socialItem {
+  margin-left: 30px;
+
+  transition: transform 250ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+
+  &:hover {
+    transform: scale(1.3);
+  }
+}
+
+.footer__socialIcon {
+  background-color: #fea5bb;
+  border-radius: 50%;
+
+  transition: background-color 250ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+
+  &:hover {
+    background-color: #d41443;
+  }
+}
+
+.footer__contacts {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1.83;
+
+  text-align: right;
+
+  color: #000000;
+
+  margin-bottom: 45px;
+}
+
+.footer__contactsLink {
+  color: #d41443;
+}
+
+.footer__copyRight {
+  border-top: 1px solid #e1e1e1;
+  padding: 20px 85px;
+  text-align: center;
+
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.5;
+
+  color: #907e82;
+
+  @include respond-to(tablet) {
+    display: flex;
+    justify-content: center;
+  }
+}
+.footer__copyRightPeshka {
+  &:nth-child(1) {
+    margin-right: 5px;
+  }
+}

@@ -1,0 +1,104 @@
+/*Container*/
+.container {
+  /* Responsive */
+
+  margin: 0 auto;
+  padding: 0 20px;
+
+  width: 100%;
+
+  /* Mobile-adaptive */
+
+  @include respond-to(mobile) {
+    & {
+      width: 480px;
+    }
+  }
+  /*Tablet*/
+  @include respond-to(tablet) {
+    & {
+      padding: 0 34px;
+
+      width: 768px;
+    }
+  }
+
+  /*Desktop*/
+  @include respond-to(desktop) {
+    & {
+      padding: 0 115px;
+
+      width: 1280px;
+    }
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+li,
+a {
+  text-decoration: none;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+:active,
+:hover,
+:focus {
+  outline: 0;
+  outline-offset: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/*Title - basic style*/
+.title {
+  font-family: $font-title;
+  color: $font-accent;
+  @include text(34px, 1.15);
+  letter-spacing: 0.04em;
+
+  text-transform: uppercase;
+}
+
+/*Sub-title*/
+.sub-title {
+  font-family: $font-title;
+  color: $font-label;
+  @include text(18px, 1.17);
+
+  text-transform: uppercase;
+}
+/* Button-primary (buy-now,read-more,locations,franchise) */
+.btn-primary {
+  @include centered;
+  padding: 13px 37px;
+
+  height: 44px;
+
+  font-family: inherit;
+  @include text(16px, 1.31, 700);
+  color: $font-accent;
+
+  background-color: $bg-button-first;
+
+  border-radius: 22px;
+  border-color: transparent;
+
+  cursor: pointer;
+}
