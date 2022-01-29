@@ -1,5 +1,5 @@
-<header>
-    <div class="container">
+<header class="pageheader">
+    <div class="container header">
         <a href="#" class="logo">
             <img
             srcset="/images/logo/199.png 1x, /images/logo/199@2x.png 2x"
@@ -7,15 +7,27 @@
             alt="logo">
         </a>
 
-        <div class="menu-container">
-            <button type="button" class="button__header"><span class="button__text">Buy now</span></button>
-            <ul>
-                <li>Home</li>
-                <li>About us</li>
-                <li>How it's made</li>
-                <li>Our products</li>
-                <li>Contact</li>
-            </ul>
+        <button class="menu-button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="menu-container" id="menu-container" data-menu>
+            <button type="button" class="button__header">
+                <span class="button__text">Buy now</span><span class="button__sign">></span>
+            </button>
+            <nav class="navigation">
+                <ul class="navigation-links">
+                    <li class="navigation-links__item">Home</li>
+                    <li class="navigation-links__item">About us</li>
+                    <li class="navigation-links__item">How it's made</li>
+                    <li class="navigation-links__item">Our products</li>
+                    <li class="navigation-links__item">Contact</li>
+                </ul>
+            </nav>
+            
         </div>
     </div>
 </header>
+
