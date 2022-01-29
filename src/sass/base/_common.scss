@@ -87,9 +87,9 @@ a {
 /* Button-primary (buy-now,read-more,locations,franchise) */
 .btn-primary {
   @include centered;
-  padding: 13px 37px;
+  padding: 13px 35px;
 
-  height: 44px;
+  min-height: 44px;
 
   font-family: inherit;
   @include text(16px, 1.31, 700);

@@ -1,59 +1,67 @@
 <section class="about section">
   <div class="container">
     <p class="about__title-label sub-title">tradition and love</p>
-    <h2 class="about__title title">how it’s <br />made?</h2>
+    <h2 class="about__title title">how it’s made?</h2>
+    <div class="about__block">
+      <picture class="about__picture">
+        <source
+          media="(min-width: 1280px)"
+          srcset="/images/about/cow/desc-516.webp 1x, /images/about/cow/desc-1032@2x.webp 2x"
+          type="image/webp"
+        />
+        <source
+          media="(min-width: 1280px)"
+          srcset="/images/about/cow/desc-516.png 1x, /images/about/cow/desc-1032@2x.png 2x"
+          type="image/png"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="/images/about/cow/tab-340.webp 1x, /images/about/cow/tab-680@2x.webp 2x"
+          type="image/webp"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="/images/about/cow/tab-340.png 1x, /images/about/cow/tab-680@2x.png 2x"
+          type="image/png"
+        />
+        <source
+          media="(max-width: 767px)"
+          srcset="/images/about/cow/mob-280.webp 1x, /images/about/cow/mob-560@2x.webp 2x"
+          type="image/webp"
+        />
+        <source
+          media="(max-width: 767px)"
+          srcset="/images/about/cow/mob-280.png 1x, /images/about/cow/mob-560@2x.png 2x"
+          type="image/png"
+        />
 
-    <picture class="about__picture">
-      <source
-        media="(min-width: 1200px)"
-        srcset="/images/about/cow/desc-516.webp 1x, /images/about/cow/desc-1032@2x.webp 2x"
-        type="image/webp"
-      />
-      <source
-        media="(min-width: 1200px)"
-        srcset="/images/about/cow/desc-516.png 1x, /images/about/cow/desc-1032@2x.png 2x"
-        type="image/png"
-      />
-      <source
-        media="(min-width: 768px)"
-        srcset="/images/about/cow/tab-340.webp 1x, /images/about/cow/tab-680@2x.webp 2x"
-        type="image/webp"
-      />
-      <source
-        media="(min-width: 768px)"
-        srcset="/images/about/cow/tab-340.png 1x, /images/about/cow/tab-680@2x.png 2x"
-        type="image/png"
-      />
-      <source
-        media="(max-width: 767px)"
-        srcset="/images/about/cow/mob-280.webp 1x, /images/about/cow/mob-560@2x.webp 2x"
-        type="image/webp"
-      />
-      <source
-        media="(max-width: 767px)"
-        srcset="/images/about/cow/mob-280.png 1x, /images/about/cow/mob-560@2x.png 2x"
-        type="image/png"
-      />
+        <img src="/images/about/cow/mob-280.png" alt="Фото банки молока и коровы" />
+      </picture>
+      <div class="about__content-box">
+        <ul class="about__list">
+          <li class="about__text">
+            <p class="about__paragraph">
+              Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus,
+              faucibus lorem eget, egestas eros. Maecenas eleifend erat at justo fringilla.
+            </p>
+          </li>
+          <li class="about__text about__text--light">
+            <p class="about__paragraph">
+              Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus
+              orci in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a
+              feugiat urna maximus. Cras massa nibh, tincidunt.
+            </p>
+            <p class="about__paragraph">Aliquam erat volutpat. Aenean accumsan.</p>
+          </li>
+        </ul>
 
-      <img src="/images/about/cow/mob-280.png" alt="Фото банки молока и коровы" />
-    </picture>
-    <ul class="about__list">
-      <li class="about__text">
-        <p class="about__paragraph">
-          Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus
-          lorem eget, egestas eros. Maecenas eleifend erat at justo fringilla.
-        </p>
-      </li>
-      <li class="about__text about__text--light">
-        <p class="about__paragraph">
-          Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci
-          in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna
-          maximus. Cras massa nibh, tincidunt.
-        </p>
-        <p class="about__paragraph">Aliquam erat volutpat. Aenean accumsan.</p>
-      </li>
-    </ul>
-
-    <button type="button" class="about__button">Read more</button>
+        <button type="button" class="about__button btn-primary">
+          Read more
+          <svg class="about__arrow" width="5px" height="8px">
+            <use href="/images/spriteNata.svg#arrow_buy-now"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
   </div>
 </section>
