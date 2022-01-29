@@ -1,11 +1,16 @@
 @import '../../node_modules/swiper/swiper-bundle.css';
-.customer-reviews__section {
+.customer-reviews__container {
   padding-bottom: 40px;
   padding-top: 40px;
 }
 
 .swiper {
   padding-bottom: 20px;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 9px;
 }
 
 .swiper-slider__box {
@@ -77,6 +82,11 @@
 
 .swiper-pagination-bullet-active {
   background: $markers-house;
+  background-image: url(../images/slider/house-icon.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  background-color: transparent;
 }
 
 .swiper-slider__name {
@@ -86,16 +96,37 @@
   text-align: center;
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+  opacity: 0;
+  position: absolute;
+  width: 33.33%;
+  height: 50%;
+  top: 50%;
+}
+
+.swiper-button-next {
+  transform: translate(50%, -50%);
+}
+
+.swiper-button-prev {
+  transform: translate(-50%, -50%);
+}
+
 @media screen and (min-width: 768px) {
-  .customer-reviews__section {
-    padding: 60px 0;
-  }
   .customer-reviews__container {
-    padding: 0 74px;
+    padding: 60px 74px;
+  }
+
+  .swiper-slide__image {
+    margin-bottom: 19px;
   }
 
   .swiper-slider__box {
     padding: 43px 38px 12px;
+    &::after {
+      bottom: -24px;
+    }
   }
 
   .swiper-slide__comment {
@@ -104,4 +135,49 @@
     letter-spacing: 0.04em;
     padding: 4px 32px 10px;
   }
-} ;
+
+  .swiper-slider__label {
+    height: 78px;
+    margin-top: 24px;
+  }
+
+  .swiper-slider__name {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .customer-reviews__container {
+    padding: 60px 177px;
+  }
+
+  .swiper-slide__image {
+    margin-bottom: 15px;
+  }
+
+  .swiper-slider__box {
+    padding: 47px 52px 32px;
+    &::before {
+      top: 32px;
+      left: 50px;
+    }
+    &::after {
+      bottom: -15px;
+    }
+  }
+
+  .swiper-slide__comment {
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    padding: 4px 35px 0 28px;
+  }
+
+  .swiper-slider__label {
+    height: 85px;
+    margin-top: 15px;
+  }
+
+  .swiper-slider__name {
+    font-size: 20px;
+  }
+}
