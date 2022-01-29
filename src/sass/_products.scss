@@ -1,29 +1,55 @@
 .products__label {
   font-family: $font-title;
-  font-size: 30px;
-  line-height: 1.13;
+  font-size: 18px;
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.04em;
 
   color: $font-label;
-}
-.products__section {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  @media screen and (min-width: 768px) {
-    padding-top: 120px;
-    padding-bottom: 120px;
-  }
-}
-.products__title {
-  margin-bottom: 144px;
 
   @media screen and (min-width: 768px) {
-    margin-bottom: 150px;
+    font-size: 26px;
+    line-height: 1.15;
   }
 
   @media screen and (min-width: 1280px) {
-    margin-bottom: 259px;
+    font-size: 34px;
+    line-height: 1.13;
+  }
+}
+
+.products__title {
+  text-align: center;
+
+  font-size: 34px;
+  line-height: 1.15;
+
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 58px;
+    line-height: 1.14;
+  }
+}
+.products__section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  //   @media screen and (min-width: 768px) {
+  //     padding-top: 40px;
+  //     padding-bottom: 120px;
+  //   }
+}
+.products__title {
+  margin-bottom: 138px;
+
+  //   @media screen and (min-width: 768px) {
+  //     margin-bottom: 138px;
+  //   }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 226px;
   }
 }
 .products__list {
@@ -43,16 +69,27 @@
   color: $font-white;
 
   &::after {
-    content: '...';
-    display: block;
+    content: ' ';
     position: absolute;
-    top: 214px;
-    // left: 50%;
+    background-image: url(/images/products/products-3dots.svg);
+    background-size: 26px 6px;
+    top: 44%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 26px;
+    height: 6px;
+  }
+  @media screen and (min-width: 768px) {
+    top: 205px;
   }
   @media screen and (min-width: 1280px) {
     font-size: 30px;
     line-height: 1.13;
     margin-bottom: 70px;
+
+    top: 229px;
   }
 }
 
@@ -270,4 +307,10 @@
 
 .products__button--flex {
   @include centered;
+}
+.products__icon {
+  width: 11px;
+  height: 9px;
+
+  fill: $font-accent;
 }
