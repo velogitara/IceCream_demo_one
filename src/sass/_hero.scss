@@ -42,25 +42,23 @@
 
   // основные кнопки
   .hero__button {
-    font-family: DM Sans;
-    font-style: normal;
-    font-weight: normal;
     font-size: 8px;
     line-height: 10px;
+
     padding-top: 9px;
     padding-bottom: 9px;
     padding-left: 14px;
     padding-right: 14px;
     border-radius: 20%;
     border: 0px;
-    display: flex;
-    align-items: center;
-    text-align: center;
+    @include centered;
+    // display: flex;
+    // align-items: center;
+    // text-align: center;
     color: #d41443;
     background: #ffffff;
-    transition-property: background-color, color, transform;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms $cubic, color 250ms $cubic;
+
     &:hover,
     :focus {
       color: #ffffff;
@@ -282,7 +280,7 @@
     height: auto;
   }
 }
-@media (min-width: 1280px) and (max-width: 1920px) {
+@media (min-width: 1280px) {
   .hero-section {
     background-color: #ffb8ca;
   }
@@ -332,9 +330,6 @@
     margin-left: 15px;
   }
   .hero__button {
-    font-family: DM Sans;
-    font-style: normal;
-    font-weight: normal;
     font-size: 14px;
     line-height: 18px;
     display: flex;
@@ -357,7 +352,7 @@
       background: #d41443;
     }
   }
-  .box-secodary {
+  .box-secondary {
     display: flex;
     align-items: center;
     margin-top: 56px;
@@ -365,6 +360,7 @@
   .box-text-title {
     text-align: start;
   }
+
   .hero__text {
     display: block;
     font-family: DM Sans;
@@ -393,16 +389,6 @@
     color: #d41443;
     width: 7px;
     height: 7px;
-  }
-  .elipse {
-    position: relative;
-    top: -40px;
-
-    display: block;
-    min-width: 538px;
-    height: 538px;
-    border-radius: 50%;
-    background-color: #ffa5ba;
   }
 
   // белые 2 эллипса и цифры
@@ -462,29 +448,37 @@
     color: #ffffff;
   }
 
+  .box-tex {
+    position: relative;
+    left: 200px;
+    min-width: 190px;
+  }
+
   // картинки
   .hero__bottle-img {
-    width: 188px;
+    position: absolute;
+    bottom: 95px;
+  }
+
+  .elipse {
+    position: relative;
+    top: -70px;
+    z-index: 0;
+
     display: block;
-    width: 100%;
-    height: auto;
-    margin-right: 30px;
+    min-width: 538px;
+    height: 538px;
+    border-radius: 50%;
+    background-color: #ffa5ba;
   }
   .hero__main-img {
     position: absolute;
-
-    width: 236px;
-    height: 557px;
-    display: block;
-    max-width: 100%;
-    height: auto;
+    bottom: -70px;
+    left: 23%;
   }
-  .hero__icecreamgirl-img {
+  .hero__iceCreamGirl-img {
     position: absolute;
-    width: 293px;
-    height: 232px;
-    display: block;
-    max-width: 100%;
-    height: auto;
+    bottom: -70px;
+    left: 80%;
   }
 }

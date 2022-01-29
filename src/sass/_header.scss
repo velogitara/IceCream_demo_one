@@ -126,6 +126,8 @@
 .navigation-links {
   @include respond-to(desktop) {
     display: flex;
+    position: relative;
+    z-index: 1;
   }
 }
 
