@@ -100,6 +100,17 @@
 }
 
 .footer__contacts {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    font-size: 14px;
+    line-height: 1.857;
+  }
+
+  @include respond-to(desktop) {
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.02em;
+  }
+
   font-weight: bold;
   font-size: 12px;
   line-height: 1.83;
