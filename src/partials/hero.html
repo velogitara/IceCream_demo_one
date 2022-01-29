@@ -1,13 +1,17 @@
-<section class="hero-section">
+<section class="hero-section" id="hero">
   <div class="container">
     <div></div>
-    <div class="hero"></div>
-    <h1 class="hero-title">ice cream made with passion</h1>
-    <h2></h2>
+    <div class="hero">
+    <div class="maine-box">
+      <div class="box-text-title">
+    <h1 class="hero__title">ice cream<br>made with </h1>
+    <h2 class="hero__secondary-title">passion</h2>
+  </div>
     <ul class="hero__list">
       <li class="hero__item"><button class="hero__button">Products</button></li>
       <li class="hero__item"><button class="hero__button">How it's made?</button></li>
     </ul>
+    <div class="box-secodary">
     <picture class="hero__bottle-img">
       <source
         media="(min-width: 1280px)"
@@ -38,18 +42,42 @@
 
       <img src="/images/hero/milkbottle/desc-188@.png" alt="milkBottle" />
     </picture>
+    <div class="box-tex">
     <p class="hero__text">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
       labore et
     </p>
-    <div class="box">
-      <p class="box__number">16</p>
-      <p class="box__text">cafes</p>
-    </div>
-    <div class="box">
-      <p class="box__number">23</p>
-      <p class="box__text">food trucks</p>
-    </div>
+    <button class="hero__button-arrow">
+      <svg class="hero__svg">
+        <use href="/images/spriteNata.svg#products-arrow"></use>
+      </svg>
+    </button>
+  </div>
+  </div>
+  </div>
+  
+  <div class="elipse"></div>
+
+  <div class="box-elipse"> 
+   
+      <div class="white-elipse-first">
+          <div class="box">
+          <p class="box__number">16</p>
+          <p class="box__text">cafes</p>
+          </div> 
+      </div>
+      
+
+      <div class="white-elipse-second">
+       
+          <div class="box">
+          <p class="box__number">23</p>
+          <p class="box__text">food trucks</p>
+          </div>
+      </div>
+    
+   </div>
+  
     <picture class="hero__main-img">
       <source
         media="(min-width:1280px)"
@@ -81,7 +109,7 @@
         srcset="/images/hero/icecream/mob-171.png 1x, /images/hero/icecream/mob-342@2x.png 2x"
         type="image/png"
       />
-      <img src="/images/hero/icecream/desc-236.png" alt="icecream" />
+      <!-- <img src="/images/hero/icecream/desc-236.png" alt="icecream" /> -->
     </picture>
     <picture class="hero__icecreamgirl-img">
       <source
@@ -116,7 +144,8 @@
         "
         type="image/png"
       />
-      <img src="/images/hero/icecreamgirl/desc-293.png" alt="icecreamgirl" />
+      <!-- <img src="/images/hero/icecreamgirl/desc-293.png" alt="icecreamgirl" /> -->
     </picture>
+      </div>
   </div>
 </section>
