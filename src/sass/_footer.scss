@@ -2,10 +2,10 @@
   background-color: #fff5f6;
 }
 .footer__container {
+  padding-top: 20px;
   @include respond-to(tablet) {
     display: flex;
     justify-content: space-between;
-    padding-top: 20px;
   }
 }
 .footer__title {
@@ -15,21 +15,51 @@
 
   text-transform: uppercase;
 }
+
 .footer__titleOne {
-  width: 232px;
+  @include respond-to(tablet-only) {
+    width: 232px;
+  }
 
   font-size: 18px;
   line-height: 1.16;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    font-size: 26px;
+    line-height: 1.153;
+  }
+
+  @include respond-to(desktop) {
+    font-size: 30px;
+    line-height: 1.13;
+    letter-spacing: 0.04em;
+  }
 
   color: #ffa5ba;
 
   margin-bottom: 17px;
 }
+
 .footer__titleTwo {
-  width: 200px;
+  @include respond-to(tablet-only) {
+    width: 200px;
+  }
+
   font-size: 34px;
   line-height: 1.14;
   letter-spacing: 0.04em;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    font-size: 48px;
+    line-height: 1.145;
+    letter-spacing: 0.06em;
+  }
+
+  @include respond-to(desktop) {
+    font-size: 58px;
+    line-height: 1.137;
+    letter-spacing: 0.06em;
+  }
 
   color: #d41443;
 
@@ -70,6 +100,17 @@
 }
 
 .footer__contacts {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    font-size: 14px;
+    line-height: 1.857;
+  }
+
+  @include respond-to(desktop) {
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.02em;
+  }
+
   font-weight: bold;
   font-size: 12px;
   line-height: 1.83;

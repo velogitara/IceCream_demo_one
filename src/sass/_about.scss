@@ -1,59 +1,164 @@
 .about {
   background-color: $bg-section-secondary;
-  padding: 40px 0;
-
+  padding: 50px 0;
   background-origin: border-box;
-  background-image: url(/images/about/bgabout/mob-640@2x.png);
   background-repeat: no-repeat;
-  background-position: bottom 120px center;
-  background-size: 480px;
 
+  @include respond-to(mobile-only) {
+    background-image: url(/images/about/bgabout/mob-640@2x.png);
+    background-position: bottom 120px center;
+    background-size: contain;
+    width: 100%;
+    max-width: 768px;
+  }
+
+  @include respond-to(desktop) {
+    background-size: contain;
+    background-image: url(/images/about/bgabout/desc-1282.png);
+    background-position: bottom center;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(/images/about/bgabout/desc-2564@2x.png);
+    }
+  }
   &__title-label {
     text-align: center;
-    color: $font-label;
     margin-bottom: 15px;
+
+    @include respond-to(tablet) {
+      @include text(26px, 1.15);
+    }
+
+    @include respond-to(desktop) {
+      @include text(30px, 1.13);
+      letter-spacing: 0.04em;
+    }
   }
   &__title {
     text-align: center;
-    color: $font-accent;
+
     letter-spacing: 0.04em;
-    margin-bottom: 26px;
+    @include respond-to(mobile-only) {
+      max-width: 280px;
+      margin: 0 auto 26px;
+    }
+    @include respond-to(tablet) {
+      margin-bottom: 50px;
+      @include text(48px, 1.15);
+    }
+
+    @include respond-to(desktop) {
+      margin-bottom: 55px;
+      @include text(58px, 1.14);
+    }
+  }
+  &__block {
+    @include respond-to(tablet) {
+      display: flex;
+      padding: 0 5px 0 5px;
+    }
+    @include respond-to(desktop) {
+      padding: 0;
+    }
   }
   &__picture {
     @include centered;
-    margin-bottom: 46px;
+    @include respond-to(mobile-only) {
+      width: 100%;
+      margin-bottom: 46px;
+    }
+    @include respond-to(tablet) {
+      min-width: 340px;
+      height: 340px;
+      margin-right: 17px;
+    }
+    @include respond-to(desktop) {
+      min-width: 516px;
+      height: 516px;
+      margin-right: 74px;
+    }
   }
-
-  &__text {
+  &__content-box {
     padding: 0 50px;
-    margin-bottom: 47px;
+    @media screen and (min-width: 768px) {
+      padding: 50px 0 0;
+    }
+  }
+  &__text {
+    margin-bottom: 30px;
 
-    font-family: 'DM Sans', sans-serif;
     @include text(12px, 1.62, 500);
     color: $font-black;
+
+    @include respond-to(tablet) {
+      @include text(14px, 1.76, 500);
+    }
+
+    @include respond-to(desktop) {
+      @include text(16px, 1.76, 500);
+      letter-spacing: 0.04em;
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+
+        @include respond-to(desktop) {
+          margin-bottom: 35px;
+        }
+      }
+    }
   }
   &__text--light {
     color: $font-grey;
+    margin-bottom: 22px;
 
+    @include respond-to(tablet) {
+      margin-bottom: 56px;
+
+      letter-spacing: 0.04em;
+    }
+    @include respond-to(desktop) {
+      margin-bottom: 37px;
+
+      @include text(14px, 1.94, 500);
+    }
     & .about__paragraph:not(:last-child) {
       margin-bottom: 19px;
+
+      @include respond-to(tablet) {
+        margin-bottom: 17px;
+      }
+      @include respond-to(desktop) {
+        margin-bottom: 35px;
+      }
     }
   }
   &__button {
-    display: block;
-    text-align: center;
-    margin: 0 auto;
-    padding: 13px 37px;
+    @include centered($align: baseline);
 
+    margin: 0 auto 0 0;
     width: 176px;
-    height: 44px;
 
-    font-family: 'DM Sans', sans-serif;
     @include text(14px, 1.28, 700);
-    color: $font-accent;
 
-    background: $bg-button-first;
-    border-radius: 22px;
-    border-color: transparent;
+    @include transit(background-color);
+
+    @include respond-to(tablet) {
+      @include text(16px, 1.31, 700);
+    }
+    @include respond-to(desktop) {
+      @include text(16px, 1.31, 700);
+    }
+    &:hover,
+    &:focus,
+    &:hover .about__arrow,
+    &:focus .about__arrow {
+      background-color: $bg-button-hover;
+      fill: $bg-button-hover;
+    }
+  }
+  &__arrow {
+    margin-left: 13px;
+    fill: $bg-button-first;
+    background-color: $bg-button-first;
   }
 }
