@@ -154,10 +154,11 @@
   }
 }
 
-.button__header--second {
+.for-tablet {
   display: none;
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     display: flex;
+    margin: 0;
     justify-content: center;
     align-items: center;
     background-color: $bg-button-first;
