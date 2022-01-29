@@ -65,6 +65,7 @@
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.04em;
+  text-transform: uppercase;
 
   color: $font-white;
 
@@ -293,6 +294,7 @@
 }
 
 .products__button {
+  cursor: pointer;
   margin-left: auto;
   margin-right: auto;
   padding: 0;
@@ -309,6 +311,7 @@
   @include centered;
 }
 .products__icon {
+  cursor: pointer;
   width: 11px;
   height: 9px;
 
