@@ -13,7 +13,7 @@
   }
 
   @include respond-to(desktop) {
-    background-size: 1280px;
+    background-size: contain;
     background-image: url(/images/about/bgabout/desc-1282.png);
     background-position: bottom center;
 
