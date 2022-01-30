@@ -121,3 +121,27 @@
     height: 336px;
   }
 }
+
+.hero__milkContainer {
+  @include respond-to(mobile-only) {
+    display: none;
+  }
+}
+.hero__milkTextContainer {
+  margin-top: 65px;
+  margin-left: 140px;
+}
+
+.hero__milkImage {
+  position: absolute;
+  bottom: 19px;
+  left: 40px;
+}
+.hero__milkText {
+  width: 144px;
+
+  font-size: 11px;
+  line-height: 1.1;
+
+  color: #ffffff;
+}
