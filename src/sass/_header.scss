@@ -44,6 +44,7 @@
     left: 50%;
     background-color: $font-accent;
     transform: translate(-50%, -50%);
+    @include transit(transform);
   }
 
   & span:nth-of-type(2) {
@@ -70,7 +71,7 @@
 
   @include respond-to(mobile) {
     &.is-open {
-      left: 450px;
+      left: 90%;
     }
   }
 
@@ -140,20 +141,26 @@
   }
 
   @include respond-to(desktop) {
-    width: 159px;
+    width: 160px;
+    height: 44px;
     margin-bottom: 0;
     margin-top: 0;
+    margin-right: 0;
   }
 
   .button__sign {
     margin-left: 15px;
+    @include respond-to(desktop) {
+      margin-left: 12px;
+    }
   }
 }
 
-.button__header--second {
+.for-tablet {
   display: none;
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     display: flex;
+    margin: 0;
     justify-content: center;
     align-items: center;
     background-color: $bg-button-first;
@@ -176,9 +183,9 @@
       justify-content: center;
       align-items: baseline;
       color: $font-accent;
-      font-weight: 900;
+      font-weight: 700;
       font-size: 16px;
-      line-height: 21px;
+      line-height: 1.31;
     }
 
     .button__sign {
