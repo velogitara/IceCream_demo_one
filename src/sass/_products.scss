@@ -307,6 +307,8 @@
   border-radius: 50%;
   background-color: $bg-section-primary;
 
+  @include transit(transform);
+
   &:hover {
     transform: scale(1.3);
   }
@@ -321,6 +323,8 @@
   height: 9px;
 
   fill: $font-accent;
+
+  @include transit(transform);
 
   .products__button:hover & {
     transform: scale(1.9);
