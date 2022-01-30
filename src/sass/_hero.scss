@@ -1,522 +1,82 @@
-@include respond-to(mobile-only) {
-    .hero-section {
-      background-color: #ffb8ca;
-    }
-   
-  
-    .hero__title {
-      font-family: Titan One;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 26px;
-      line-height: 30px;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: #FFFFFF;
-    }
-    .hero__secondary-title{
-      font-family: Titan One;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 34px;
-      line-height: 39px;
-      text-align: center;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: #D41443;
-    }
+.hero-section {
+  background-color: $bg-hero;
+}
+.hero-container {
+  position: relative;
+  padding-top: 135px;
+  padding-bottom: 160px;
 
+  background-image: url(../images/hero/elipse/Ellipse-mob.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
 
-    .hero__title--accent {
-      color: $font-accent;
-      @include text(48px, 0.96);
-    }
-   
-    .hero__list {
-      display: flex;
-      margin-top: 19px;
-    }
-    .hero__item+.hero__item {
-      margin-left: 8px;
+.header__title {
+  position: relative;
+  z-index: 2;
 
-    }
-    // .hero__item {
-    // }
+  margin-bottom: 20px;
 
+  font-family: Titan One;
+  font-style: normal;
+  font-weight: normal;
 
-    // основные кнопки
-    .hero__button {
-      font-family: DM Sans;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 8px;
-      line-height: 10px;
-      padding-top: 9px;
-      padding-bottom: 9px;
-      padding-left: 14px;
-      padding-right: 14px;
-      border-radius: 20%;
-      border: 0px;
-      display: flex;
-      align-items: center;
-      text-align: center;
-      color: #d41443;
-      background: #FFFFFF;
-      transition-property: background-color, color, transform;
-      transition-duration: 250ms;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      &:hover,:focus{
-        color: #FFFFFF;
-        background: #d41443;
-      }
-     
-    }
+  color: $font-white;
 
-    .hero__main-img {
-      width: 171px;
-      height: 410px;
-      display: block;
-      max-width: 100%;
-      height: auto;
-    }
+  text-transform: uppercase;
+  @include respond-to(mobile-only) {
+    width: 218px;
 
-
-
-
-    .hero__button-arrow{
-      display: none;
-    }
-    .box-secodary{
-      display: none;
-    }
-    .box-elipse{
-      display: none;
-    }
-   
+    font-size: 26px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
   }
-  @media (min-width: 768px) and (max-width: 1279px) {
-    .hero-section {
-      background-color: #ffb8ca;
-    }
-    .conteiner{
-      width: 1280px;
-      margin-left: 15px;
-      margin-right: 15px;
-    }
-    .hero {
-      display: flex;
-       }
-       .maine-box{
-        display: flex;
-        flex-direction: column;
-        padding-top: 42px;
-        padding-bottom: 56px;
-        margin-right: 39px;
-      }
- 
-   
-    .hero__title {
-      font-family: Titan One;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 22px;
-      line-height: 25px;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      
-      color: #FFFFFF;
-    }
-    .hero__secondary-title{
-      font-family: Titan One;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 34px;
-      line-height: 39px;
-      text-align: center;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: #D41443;
-      margin: 0;
-      padding: 0;
-      
-    }
-    .hero__title--accent {
-      color: $font-accent;
-      @include text(34px, 0.9);
-    }
-    // основные кнопки
-    .hero__list {
-      display: flex;
-      margin-top: 20px;
-    }
-    .hero__item+.hero__item {
-      margin-left: 8px;
+}
 
-    }
-    .hero__button{
-      font-family: DM Sans;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 8px;
-      line-height: 10px;
-      padding-top: 9px;
-      padding-bottom: 9px;
-      padding-left: 14px;
-      padding-right: 14px;
-      border-radius: 20%;
-      border: 0px;
-      display: flex;
-      align-items: center;
-      text-align: center;
-      color: #D41443;
-      background-color: #FFFFFF;
-      transition-property: background-color, color, transform;
-      transition-duration: 250ms;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      &:hover,:focus{
-      color: #FFFFFF;
-      background: #d41443;
-      }
-    }
-
-
-    .box-secodary{
-      display: flex;
-      align-items: center;
-      margin-top: 19px;
-    }
-    
-  
-
-    .hero__text {
-      font-family: DM Sans;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 8px;
-      line-height: 150%;
-      color: #ffffff;
-    }
-
-
-         // белые 2 эллипса и цифры
-    
-    
-         // .box-elipse{
-    //   margin-left: px;
-    //   margin-right: auto;
-    //   padding-top: px;
-    //   padding-bottom: px;
-    // }
-
-
-    .white-elipse-first{
-      
-      display: block;
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      background-color:  #FFFFFF;
-      margin-bottom: 62px;
-     }
-     .white-elipse-second{
-        display: block;
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      background-color:  #FFFFFF;
-    }
-
-
-     .white-elipse-first{
-       position: relative;
-     }
-     .white-elipse-second{
-      position: relative;
-     }
-    
- 
-    
-    .box {
-      position: absolute;
-      right: +56%;
-      top: +5%;
-    }
-    .box__number {
-      font-family: Titan One;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 28px;
-      line-height: 32px;
-      text-align: right;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: #D41443;
-    }
-    .box__text {
-      font-family: DM Sans;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 8px;
-      line-height: 10px;
-      text-align: right;
-      color: #FFFFFF;
-    }
-
-    .hero__button-arrow{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 18px;
-      height: 18px;
-      border-radius: 50%;
-      background-color: #ffffff;
-      border: 0px;
-      margin-top: 7px;
-      
-    }
-    .hero__svg{
-      fill: currentColor;
-      color: #d41443;
-      width: 5px;
-      height: 5px;
-
-    }
-
-    .hero__bottle-img {
-      width: 124px;
-      height: 126px;
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-    .hero__main-img {
-      width: 143px;
-      height: 336px;
-      display: block;
-      max-width: 100%;
-      height: auto;
-    }
-    .hero__icecreamgirl-img {
-      width: 168px;
-      height: 133px;
-      display: block;
-      max-width: 100%;
-      height: auto;
-    }
+.header__title--accentWord {
+  @include respond-to(mobile-only) {
+    font-size: 48px;
+    line-height: 0.958;
+    color: $bgsocial-hover;
   }
-  @media (min-width: 1280px) and (max-width: 1920px) {
-    .hero-section {
-      background-color: #ffb8ca;
-    }
-  
-   
-  
-    .hero {
-      
-      display: flex;
-      
-    }
-    .maine-box{
-      display: flex;
-      flex-direction: column;
-      padding-top: 42px;
-      padding-bottom: 56px;
-      margin-right: 83px;
-    }
-    .hero__title {
-      font-family: Titan One;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 38px;
-      line-height: 44px;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: #FFFFFF;
-    }
-    .hero__secondary-title{
-      font-family: Titan One;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 58px;
-      line-height: 66px;
-      text-align: center;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      text-align: start; 
-      
-      color: #D41443;
-    }
-    .hero__title--accent {
-      color: $font-accent;
-      @include text(58px, 0.9);
-    }
-    .hero__list {
-      display: flex;
-      margin-top: 25px;
-    }
-    .hero__item+.hero__item {
-      margin-left: 15px;
+}
 
-    }
-    .hero__button {
-      font-family: DM Sans;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 18px;
-      display: flex;
-      align-items: center;
-      text-align: center;
-      border-radius: 20px;
-      border: 0px;
-      color: #d41443;
-      background: #FFFFFF;
-      padding-top: 15px;
-      padding-bottom: 15px;
-      padding-left: 20px;
-      padding-right: 20px;
-      transition-property: background-color, color, transform;
-      transition-duration: 250ms;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      &:hover,:focus{
-        color: #FFFFFF;
-        background: #d41443;
-      }
-    }
-    .box-secodary{
-      display: flex;
-      align-items: center;
-      margin-top: 56px;
-      
-    }
-    .box-text-title{
-    text-align: start;  
-    }
-    .hero__text {
-      display: block;
-      font-family: DM Sans;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 140%;
-      color: #ffffff;
-      }
-
-
-
-    .hero__button-arrow{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 26px;
-      height: 26px;
-      border-radius: 50%;
-      background-color: #ffffff;
-      border: 0px;
-      
-
-      margin-top: 20px;
-      
-    }
-
-    .hero__svg{
-      fill: currentColor;
-      color: #d41443;
-      width: 7px;
-      height: 7px;
-
-    }
-    .elipse{
-      
-      display: block;
-      width: 538px;
-      height: 538px;
-      border-radius: 50%;
-      background-color: #FFA5BA;
-     }
-
-    // белые 2 эллипса и цифры
-
-    .box-elipse{
-      
-      margin-left: 140px;
-      margin-right: auto;
-      padding-top: 100px;
-      // padding-bottom: px;
-    }
-    .white-elipse-first{
-      
-      display: block;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      background-color:  #FFFFFF;
-      margin-bottom: 62px;
-     }
-     .white-elipse-second{
-        display: block;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      background-color:  #FFFFFF;
-    }
-
-
-     .white-elipse-first{
-       position: relative;
-     }
-     .white-elipse-second{
-      position: relative;
-     }
-    
- 
-    
-    .box {
-      position: absolute;
-      right: +56%;
-      top: +5%;
-    }
-    .box__number {
-      font-family: Titan One;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 46px;
-      line-height: 53px;
-      text-align: right;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: #d41443;
-    }
-    .box__text {
-      font-family: DM Sans;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 18px;
-      text-align: right;
-      color: #ffffff;
-    }
-
-    // картинки 
-    .hero__bottle-img {
-      width: 188px;
-       display: block;
-      width: 100%;
-      height: auto;
-      margin-right: 30px;
-    }
-    .hero__main-img {
-      width: 236px;
-      height: 557px;
-      display: block;
-      max-width: 100%;
-      height: auto;
-    }
-    .hero__icecreamgirl-img {
-      width: 293px;
-      height: 232px;
-      display: block;
-      max-width: 100%;
-      height: auto;
-    }
+.hero__buttonList {
+  position: relative;
+  z-index: 2;
+  display: flex;
+}
+.hero__buttonItem {
+  &:not(:last-child) {
+    margin-right: 10px;
   }
+}
+.hero__button {
+  margin: 0;
+  padding: 10px 13px;
+  background-color: $bg-button-first;
+  border-radius: 22px;
+  border-color: transparent;
+
+  color: $font-accent;
+
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.2;
+
+  cursor: pointer;
+}
+
+.hero__buttonProduct {
+  background-color: $bg-button-second;
+  color: $font-white;
+}
+
+.hero__main-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
