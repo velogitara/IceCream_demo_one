@@ -1,4 +1,67 @@
-<section class="hero-section">
+<!-- -------------------------------------- header starts--------------------------------------------- -->
+
+<section class="hero-header-section">
+  <div>
+    <header class="pageheader" id="home">
+      <div class="container header">
+        <a href="#" class="logo">
+          <img
+            srcset="/images/logo/199.png 1x, /images/logo/199@2x.png 2x"
+            src="/images/logo/199.png"
+            alt="logo"
+          />
+        </a>
+
+        <button
+          class="menu-button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="menu-container" id="menu-container" data-menu>
+          <button type="button" class="btn-primary">
+            <span class="button__text">Buy now</span><span class="button__sign">></span>
+          </button>
+          <nav class="navigation">
+            <ul class="navigation-links">
+              <li class="navigation-links__item">
+                <a href="#home" class="navigation-links__link">Home</a>
+              </li>
+
+              <li class="navigation-links__item">
+                <a href="#reviews" class="navigation-links__link">About us</a>
+              </li>
+
+              <li class="navigation-links__item">
+                <a href="#about" class="navigation-links__link">How it's made</a>
+              </li>
+
+              <li class="navigation-links__item">
+                <a href="#products" class="navigation-links__link">Our products</a>
+              </li>
+
+              <li class="navigation-links__item">
+                <a href="#contacts" class="navigation-links__link">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <button type="button" class="btn-primary for-tablet">
+          <span class="button__text">Buy now</span><span class="button__sign">></span>
+        </button>
+      </div>
+    </header>
+  </div>
+
+  <!-- -------------------------------------- header ends --------------------------------------------- -->
+
+  <!-- -------------------------------------- hero starts --------------------------------------------- -->
   <div class="container hero-container">
     <picture>
       <source
@@ -76,8 +139,14 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et
         </p>
-        <button type="button"></button>
+        <button type="button" class="hero__milkButton">
+          <svg width="10" height="10" class="hero__milkButtonSvg">
+            <use href="/images/spriteNata.svg#products-arrow"></use>
+          </svg>
+        </button>
       </div>
     </div>
   </div>
 </section>
+
+<!-- -------------------------------------- hero ends --------------------------------------------- -->
