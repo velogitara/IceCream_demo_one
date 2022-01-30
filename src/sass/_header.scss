@@ -1,15 +1,22 @@
 .pageheader {
+  position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding-top: 6px;
   padding-bottom: 15px;
   background-color: $bg-hero;
+
+  @include respond-to(tablet) {
+    padding-top: 37px;
+  }
 }
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .logo {
@@ -17,14 +24,18 @@
 }
 
 .menu-button {
+  position: absolute;
   width: 20px;
   height: 20px;
-  position: relative;
+  top: 17px;
+  left: 87%;
+  margin: auto;
   border: transparent;
-  background-color: $bg-hero;
+  background-color: transparent;
+  color: $font-accent;
   z-index: 50;
   overflow: hidden;
-  @include transit(all);
+  @include transit(color);
 
   & span {
     width: 20px;
@@ -34,6 +45,7 @@
     left: 50%;
     background-color: $font-accent;
     transform: translate(-50%, -50%);
+    @include transit(transform);
   }
 
   & span:nth-of-type(2) {
@@ -44,102 +56,163 @@
     top: calc(50% + 6px);
   }
 
+  &.is-open {
+    position: fixed;
+  }
+
+  &.is-open span:first-child {
+    transform: translateX(100%);
+  }
+
+  &.is-open span:nth-child(2) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background-color: $bg-section-primary;
+  }
+
+  &.is-open span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    background-color: $bg-section-primary;
+  }
+
+  @include respond-to(mobile) {
+    &.is-open {
+      left: 90%;
+    }
+  }
+
+  @include respond-to(tablet) {
+    top: 15px;
+    left: 490px;
+
+    &.is-open {
+      top: 23px;
+      left: 95%;
+    }
+  }
+
   @include respond-to(desktop) {
     display: none;
   }
 }
 
-.menu-button.is-open span:first-child {
-  transform: translateX(100%);
-}
-
-.menu-button.is-open span:nth-child(2) {
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.menu-button.is-open span:nth-child(3) {
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(-45deg);
-}
-
 .menu-container {
-  /*display: block;*/
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #e17992;
-  padding: 24px;
+  @include respond-to(tablet-only) {
+    /*position: fixed;*/
+    display: none;
+    overflow: hidden;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    @include transit(right);
 
-  @include respond-to(mobile) {
-    width: 100%;
+    &.is-open {
+      display: block;
+      position: fixed;
+      background-color: $bg-menu;
+      right: 0;
+      z-index: 20;
+    }
+  }
+
+  @include respond-to(mobile-only) {
+    width: 250px;
+  }
+
+  @include respond-to(tablet) {
+    width: 254px;
   }
 
   @include respond-to(desktop) {
+    position: relative;
+    z-index: 1;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-direction: row-reverse;
-    background-color: $bg-hero;
+    width: 100%;
   }
 }
 
-.button__header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: $bg-button-first;
+.btn-primary {
   width: 209px;
-  height: 44px;
-  border-radius: 22px;
-  border-color: transparent;
-  width: 209px;
-  height: 44px;
   margin-bottom: 20px;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include transit(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: $bg-button-hover;
+  }
 
   @include respond-to(tablet) {
     width: 186px;
   }
 
   @include respond-to(desktop) {
-    width: 159px;
+    width: 160px;
+    height: 44px;
     margin-bottom: 0;
-  }
-
-  .button__text,
-  .button__sign {
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    color: $font-accent;
-    font-weight: 900;
-    font-size: 16px;
-    line-height: 21px;
+    margin-top: 0;
+    margin-right: 0;
   }
 
   .button__sign {
     margin-left: 15px;
+    @include respond-to(desktop) {
+      margin-left: 12px;
+    }
+  }
+}
+
+.for-tablet {
+  display: none;
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: $bg-button-first;
+    width: 160px;
+    height: 44px;
+    border-radius: 22px;
+    border-color: transparent;
+    cursor: pointer;
+
+    @include transit(background-color);
+
+    &:hover,
+    &:focus {
+      background-color: $bg-button-hover;
+    }
+
+    .button__text,
+    .button__sign {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      color: $font-accent;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.31;
+    }
+
+    .button__sign {
+      margin-left: 12px;
+    }
   }
 }
 
 .navigation-links {
   @include respond-to(desktop) {
     display: flex;
-    position: relative;
-    z-index: 1;
   }
 }
 
-.navigation-links__item {
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.29;
+.navigation-links__link {
   color: $bg-section-primary;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  border: 1px solid #e18298;
-
   @include transit(color);
 
   &:hover,
@@ -147,11 +220,30 @@
   &:active {
     color: $font-accent;
   }
+}
+
+.navigation-links__item {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.29;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid $line-menu;
+  border-left: none;
+  border-right: none;
+  padding-left: 24px;
+  cursor: pointer;
+
+  &:first-child {
+    border-top: 1px solid $line-menu;
+  }
 
   @include respond-to(desktop) {
+    padding-left: 0;
     margin-left: 35px;
     border: none;
     &:first-child {
+      border-top: none;
       margin-left: 0;
     }
   }
