@@ -16,6 +16,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .logo {
@@ -82,8 +83,8 @@
   }
 
   @include respond-to(tablet) {
-    top: 52px;
-    left: 65%;
+    top: 15px;
+    left: 490px;
 
     &.is-open {
       top: 23px;
