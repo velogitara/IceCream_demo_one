@@ -1,14 +1,24 @@
 .hero-section {
   background-color: $bg-hero;
-}
-.hero-container {
-  position: relative;
-  padding-top: 135px;
-  padding-bottom: 160px;
 
-  background-image: url(../images/hero/elipse/Ellipse-mob.png);
-  background-repeat: no-repeat;
-  background-position: right 27%;
+  .hero-container {
+    position: relative;
+    padding-top: 135px;
+    padding-bottom: 160px;
+
+    @media screen and(max-width: 480px) {
+      background-image: url(../images/hero/elipse/Ellipse-mob.png);
+      background-repeat: no-repeat;
+      background-position: right 27%;
+    }
+
+    @media screen and(min-width: 481px) and (max-width: 767px) {
+      background-image: url(../images/hero/elipse/Ellipse-desc.png);
+      background-repeat: no-repeat;
+      background-size: 346px 346px;
+      background-position: right 27%;
+    }
+  }
 }
 
 .header__title {
@@ -79,4 +89,9 @@
   bottom: 0;
   right: 20px;
   z-index: 1;
+
+  @media screen and(min-width: 481px) and (max-width: 767px) {
+    bottom: 0;
+    right: 90px;
+  }
 }
