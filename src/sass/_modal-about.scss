@@ -28,7 +28,7 @@
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  border-radius: 10px;
 
   background-origin: border-box;
   background-repeat: no-repeat;
@@ -55,12 +55,11 @@
   @include respond-to(mobile) {
     top: 30px;
     width: 450px;
-    height: 670px;
+    height: 720px;
   }
   @include respond-to(tablet) {
     top: 50px;
     width: 600px;
-    height: 700px;
     padding: 30px 40px;
   }
   @include respond-to(desktop) {
@@ -209,7 +208,9 @@
   color: $font-white;
 
   @include transit(background-color, color);
-
+  @include respond-to(tablet-only) {
+    margin-top: 15px;
+  }
   &:hover,
   &:focus {
     background-color: $bg-hero;
