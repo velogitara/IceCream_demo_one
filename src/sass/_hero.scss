@@ -3,8 +3,15 @@
 
   .hero-container {
     position: relative;
-    padding-top: 135px;
-    padding-bottom: 160px;
+
+    @include respond-to(mobile-only) {
+      padding-top: 135px;
+      padding-bottom: 160px;
+    }
+    @include respond-to(tablet) {
+      padding-top: 15px;
+      padding-bottom: 28px;
+    }
 
     @media screen and(max-width: 480px) {
       background-image: url(../images/hero/elipse/Ellipse-mob.png);
@@ -41,13 +48,26 @@
     line-height: 1.15;
     letter-spacing: 0.04em;
   }
+
+  @include respond-to(tablet) {
+    width: 165px;
+    font-size: 22px;
+    line-height: 1.13;
+    letter-spacing: 0.04em;
+  }
 }
 
 .header__title--accentWord {
+  color: $bgsocial-hover;
   @include respond-to(mobile-only) {
     font-size: 48px;
     line-height: 0.958;
-    color: $bgsocial-hover;
+  }
+  @include respond-to(tablet) {
+    font-size: 34px;
+    line-height: 0.91;
+
+    letter-spacing: 0.04em;
   }
 }
 
@@ -93,5 +113,11 @@
   @media screen and(min-width: 481px) and (max-width: 767px) {
     bottom: 0;
     right: 90px;
+  }
+  @include respond-to(tablet) {
+    bottom: 0;
+    right: 40%;
+    width: 143px;
+    height: 336px;
   }
 }
