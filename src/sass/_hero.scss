@@ -1,6 +1,10 @@
 .hero-header-section {
   position: relative;
   background-color: $bg-hero;
+}
+
+.hero__background--position {
+  position: relative;
 
   @include respond-to(tablet) {
     background-image: url(../images/hero/elipse/Ellipse-tab.png);
@@ -164,3 +168,84 @@
 .hero__milkButtonSvg {
   fill: $bg-button-second;
 }
+
+// белые 2 эллипса и цифры
+
+.hero__boxNumbersContainer {
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+
+.hero__boxNumber {
+  color: $font-accent;
+  font-family: Titan One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 1.14;
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.hero__boxText {
+  font-size: 10px;
+  line-height: 1.15;
+
+  color: #ffffff;
+}
+
+// .box-elipse {
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+// }
+// .white-elipse-first {
+//   display: block;
+//   width: 30px;
+//   height: 30px;
+//   border-radius: 50%;
+//   background-color: #ffffff;
+//   margin-bottom: 62px;
+// }
+// .white-elipse-second {
+//   display: block;
+//   width: 30px;
+//   height: 30px;
+//   border-radius: 50%;
+//   background-color: #ffffff;
+// }
+
+// .white-elipse-first {
+//   position: relative;
+// }
+// .white-elipse-second {
+//   position: relative;
+// }
+
+// .box {
+//   position: absolute;
+//   right: +56%;
+//   top: +5%;
+// }
+// .box__number {
+//   font-family: Titan One;
+//   font-style: normal;
+//   font-weight: normal;
+//   font-size: 46px;
+//   line-height: 53px;
+//   text-align: right;
+//   letter-spacing: 0.04em;
+//   text-transform: uppercase;
+//   color: #d41443;
+// }
+// .box__text {
+//   font-family: DM Sans;
+//   font-style: normal;
+//   font-weight: normal;
+//   font-size: 14px;
+//   line-height: 18px;
+//   text-align: right;
+//   color: #ffffff;
+// }
