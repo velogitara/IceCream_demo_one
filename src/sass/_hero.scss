@@ -1,11 +1,27 @@
 .hero-header-section {
   position: relative;
   background-color: $bg-hero;
+}
 
-  @include respond-to(tablet) {
-    background-image: url(../images/hero/elipse/Ellipse-tab.png);
-    background-repeat: no-repeat;
-    background-position: 70% 43%;
+.background-ellipse {
+  @media screen and(min-width: 768px) {
+    position: absolute;
+    top: -70px;
+    left: 300px;
+    z-index: 0;
+
+    min-width: 324px;
+    height: 322px;
+    border-radius: 50%;
+    background-color: $bg-ellips-hero;
+  }
+
+  @include respond-to(desktop) {
+    min-width: 538px;
+    height: 538px;
+    top: -44px;
+    left: 453px;
+    z-index: 0;
   }
 }
 
@@ -33,6 +49,10 @@
     background-size: 346px 346px;
     background-position: right 27%;
   }
+  @include respond-to(desktop) {
+    padding-top: 84px;
+    padding-bottom: 56px;
+  }
 }
 
 .header__title {
@@ -48,19 +68,23 @@
   color: $font-white;
 
   text-transform: uppercase;
+  letter-spacing: 0.04em;
   @include respond-to(mobile-only) {
     width: 218px;
 
     font-size: 26px;
     line-height: 1.15;
-    letter-spacing: 0.04em;
   }
 
   @include respond-to(tablet) {
     width: 165px;
     font-size: 22px;
     line-height: 1.13;
-    letter-spacing: 0.04em;
+  }
+  @include respond-to(desktop) {
+    width: 277px;
+    font-size: 38px;
+    line-height: 1.16;
   }
 }
 
@@ -73,8 +97,10 @@
   @include respond-to(tablet) {
     font-size: 34px;
     line-height: 0.91;
-
-    letter-spacing: 0.04em;
+  }
+  @include respond-to(desktop) {
+    font-size: 58px;
+    line-height: 0.91;
   }
 }
 
@@ -104,18 +130,36 @@
   line-height: 1.2;
 
   cursor: pointer;
+
+  @include respond-to(desktop) {
+    padding: 12px 22px;
+    font-size: 14px;
+    line-height: 1.3;
+  }
+  @include transit(background-color);
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $bg-button-hover;
+  }
 }
 
 .hero__buttonProduct {
   background-color: $bg-button-second;
   color: $font-white;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $ellipsis-reviews;
+  }
 }
 
 .hero__main-img {
   position: absolute;
   bottom: 0;
   right: 20px;
-  z-index: 3;
+  z-index: 2;
 
   @media screen and(min-width: 481px) and (max-width: 767px) {
     bottom: 0;
@@ -124,8 +168,10 @@
   @include respond-to(tablet) {
     bottom: 0;
     right: 32%;
-    width: 143px;
-    height: 336px;
+  }
+  @include respond-to(desktop) {
+    bottom: 0;
+    left: 550px;
   }
 }
 
@@ -137,12 +183,20 @@
 .hero__milkTextContainer {
   margin-top: 65px;
   margin-left: 140px;
+  @include respond-to(desktop) {
+    margin-top: 112px;
+    margin-left: 180px;
+  }
 }
 
 .hero__milkImage {
   position: absolute;
   bottom: 19px;
   left: 40px;
+  @include respond-to(desktop) {
+    bottom: 45px;
+    left: 77px;
+  }
 }
 .hero__milkText {
   width: 144px;
@@ -151,6 +205,12 @@
   line-height: 1.1;
 
   color: #ffffff;
+
+  @include respond-to(desktop) {
+    width: 200px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
 }
 
 .hero__milkButton {
@@ -159,8 +219,178 @@
   border-color: transparent;
   width: 34px;
   height: 34px;
+  cursor: pointer;
+
+  @include respond-to(desktop) {
+    margin-top: 20px;
+  }
+
+  @include transit(transform);
+  &:hover,
+  &:active,
+  &:focus {
+    transform: scale(1.3);
+  }
 }
 
 .hero__milkButtonSvg {
   fill: $bg-button-second;
+  @include transit(transform);
+  .hero__milkButton:hover & {
+    transform: scale(1.9);
+  }
 }
+
+//--------------------------------------- белые 2 эллипса и цифры -------------------------------------------
+
+.hero__boxNumbersContainer {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  @include respond-to(desktop) {
+    top: 73px;
+    right: 115px;
+  }
+  & > div:not(:last-child) {
+    margin-bottom: 18px;
+  }
+}
+
+.hero__boxNumber {
+  position: relative;
+  z-index: 3;
+
+  color: $font-accent;
+  font-family: Titan One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 1.14;
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  @include respond-to(desktop) {
+    font-size: 46px;
+    line-height: 1.15;
+    text-align: end;
+  }
+}
+
+.hero__boxText {
+  text-align: center;
+  font-size: 10px;
+  line-height: 1.15;
+
+  color: #ffffff;
+
+  @include respond-to(desktop) {
+    font-size: 14px;
+    line-height: 1.3;
+    min-width: 100px;
+    text-align: end;
+  }
+}
+
+.hero__boxCircleOne {
+  position: absolute;
+  top: -3px;
+  right: 12px;
+  z-index: 1;
+
+  min-width: 16px;
+  min-height: 16px;
+  background-color: $bg-button-first;
+  border-radius: 50%;
+  @include respond-to(desktop) {
+    top: -5px;
+    right: -16px;
+    min-width: 30px;
+    min-height: 30px;
+  }
+}
+.hero__boxCircleTwo {
+  position: absolute;
+  top: 40px;
+  right: 12px;
+  z-index: 2;
+
+  min-width: 16px;
+  min-height: 16px;
+  background-color: $bg-button-first;
+  border-radius: 50%;
+  @include respond-to(desktop) {
+    top: 85px;
+    right: -16px;
+    min-width: 30px;
+    min-height: 30px;
+  }
+}
+
+.hero__Girl {
+  display: none;
+  @include respond-to(tablet) {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+  }
+  @include respond-to(desktop) {
+    bottom: 0;
+    right: 140px;
+  }
+}
+
+// .box-elipse {
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+// }
+// .white-elipse-first {
+//   display: block;
+//   width: 30px;
+//   height: 30px;
+//   border-radius: 50%;
+//   background-color: #ffffff;
+//   margin-bottom: 62px;
+// }
+// .white-elipse-second {
+//   display: block;
+//   width: 30px;
+//   height: 30px;
+//   border-radius: 50%;
+//   background-color: #ffffff;
+// }
+
+// .white-elipse-first {
+//   position: relative;
+// }
+// .white-elipse-second {
+//   position: relative;
+// }
+
+// .box {
+//   position: absolute;
+//   right: +56%;
+//   top: +5%;
+// }
+// .box__number {
+//   font-family: Titan One;
+//   font-style: normal;
+//   font-weight: normal;
+//   font-size: 46px;
+//   line-height: 53px;
+//   text-align: right;
+//   letter-spacing: 0.04em;
+//   text-transform: uppercase;
+//   color: #d41443;
+// }
+// .box__text {
+//   font-family: DM Sans;
+//   font-style: normal;
+//   font-weight: normal;
+//   font-size: 14px;
+//   line-height: 18px;
+//   text-align: right;
+//   color: #ffffff;
+// }
