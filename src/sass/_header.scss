@@ -5,7 +5,8 @@
   align-items: center;
   padding-top: 6px;
   padding-bottom: 15px;
-  // background-color: $bg-hero;
+
+  background-color: $bg-hero;
 
   @include respond-to(tablet) {
     padding-top: 37px;
