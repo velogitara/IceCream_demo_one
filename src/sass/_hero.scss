@@ -6,10 +6,23 @@
 .hero__background--position {
   position: relative;
 
-  @include respond-to(tablet) {
-    background-image: url(../images/hero/elipse/Ellipse-tab.png);
-    background-repeat: no-repeat;
-    background-position: 70% 43%;
+  // @include respond-to(tablet) {
+  //   background-image: url(../images/hero/elipse/Ellipse-tab.png);
+  //   background-repeat: no-repeat;
+  //   background-position: 70% 43%;
+  // }
+}
+.background-ellipse {
+  @media screen and(min-width: 768px) and (max-width: 1279px) {
+    position: absolute;
+    top: -70px;
+    left: 300px;
+    z-index: 0;
+
+    min-width: 324px;
+    height: 322px;
+    border-radius: 50%;
+    background-color: $bg-ellips-hero;
   }
 }
 
@@ -119,7 +132,7 @@
   position: absolute;
   bottom: 0;
   right: 20px;
-  z-index: 3;
+  z-index: 2;
 
   @media screen and(min-width: 481px) and (max-width: 767px) {
     bottom: 0;
