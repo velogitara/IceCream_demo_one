@@ -1,19 +1,27 @@
 .contacts-section {
-  background-image: linear-gradient(to bottom, #fff 5%, #fff5f6 5%, #fff5f6),
-    url(../images/hero/spots.png);
+  background-image: linear-gradient(to bottom, #fff 5%, #fff5f6 5%, #fff5f6);
 
   @include respond-to(tablet) {
-    background-image: linear-gradient(to bottom, #fff 10%, #fff5f6 10%, #fff5f6),
-      url(../images/hero/spots.png);
+    background-image: linear-gradient(to bottom, #fff 10%, #fff5f6 10%, #fff5f6);
   }
 
   @include respond-to(desktop) {
-    background-image: linear-gradient(to bottom, #fff 15%, #fff5f6 15%, #fff5f6),
-      url(../images/hero/spots.png);
+    background-image: url(../images/contacts/spots.png),
+      linear-gradient(to bottom, #fff 25%, #fff5f6 15%, #fff5f6);
+    background-color: #ffffff;
 
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain 80%;
+    background-position: center;
+
     width: 100%;
+
+    padding: 200px 0;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(to bottom, #fff 10%, #fff5f6 10%, #fff5f6),
+        url(../images/contacts/spots@2x.png);
+    }
   }
 }
 

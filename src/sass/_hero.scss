@@ -1,5 +1,12 @@
-.hero-section {
+.hero-header-section {
+  position: relative;
   background-color: $bg-hero;
+
+  @include respond-to(tablet) {
+    background-image: url(../images/hero/elipse/Ellipse-tab.png);
+    background-repeat: no-repeat;
+    background-position: 70% 43%;
+  }
 }
 
 .hero-container {
@@ -12,10 +19,6 @@
   @include respond-to(tablet) {
     padding-top: 15px;
     padding-bottom: 28px;
-
-    background-image: url(../images/hero/elipse/Ellipse-tab.png);
-    background-repeat: no-repeat;
-    background-position: 300px 50%;
   }
 
   @media screen and(max-width: 480px) {
@@ -112,7 +115,7 @@
   position: absolute;
   bottom: 0;
   right: 20px;
-  z-index: 1;
+  z-index: 3;
 
   @media screen and(min-width: 481px) and (max-width: 767px) {
     bottom: 0;
@@ -120,7 +123,7 @@
   }
   @include respond-to(tablet) {
     bottom: 0;
-    right: 35%;
+    right: 32%;
     width: 143px;
     height: 336px;
   }
@@ -148,4 +151,16 @@
   line-height: 1.1;
 
   color: #ffffff;
+}
+
+.hero__milkButton {
+  margin-top: 7px;
+  border-radius: 50%;
+  border-color: transparent;
+  width: 34px;
+  height: 34px;
+}
+
+.hero__milkButtonSvg {
+  fill: $bg-button-second;
 }
