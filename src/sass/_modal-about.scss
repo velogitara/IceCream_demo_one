@@ -1,0 +1,218 @@
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+  z-index: 2;
+  overflow-y: scroll;
+
+  transition: 0.5s linear;
+
+  background: rgba(40, 1, 1, 0.3);
+}
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+
+  transform: scale(0.3) translatey(100%);
+  transition: 0.5s ease;
+}
+.modal {
+  position: absolute;
+  width: 90%;
+  top: 94px;
+  left: 50%;
+  transform: translatex(-50%);
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-image: url(/images/modal-about/ice-bg.jpg),
+    linear-gradient(
+      to bottom,
+      $bg-section-primary 25%,
+      $bg-section-secondary 25%,
+      $bg-section-secondary
+    );
+  background-position: bottom center;
+  background-size: contain;
+  width: 100%;
+
+  padding: 20px 20px;
+  @media (max-width: 479px) {
+    background-image: linear-gradient(
+      to bottom,
+      $bg-section-primary 25%,
+      $bg-section-secondary 25%,
+      $bg-section-secondary
+    );
+  }
+  @include respond-to(mobile) {
+    top: 30px;
+    width: 450px;
+    height: 670px;
+  }
+  @include respond-to(tablet) {
+    top: 50px;
+    width: 600px;
+    height: 700px;
+    padding: 30px 40px;
+  }
+  @include respond-to(desktop) {
+    width: 800px;
+    height: 600px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(
+      to bottom,
+      $bg-section-primary 38%,
+      $bg-section-secondary 38%,
+      $bg-section-secondary
+    );
+    z-index: 10;
+  }
+
+  &__close {
+    @include centered;
+
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 8px;
+    right: 8px;
+
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: $bg-hero;
+    cursor: pointer;
+
+    @include transit(background-color);
+
+    &:hover,
+    &:focus {
+      background-color: $bg-button-second;
+    }
+  }
+  &__question {
+    margin-bottom: 10px;
+    text-align: center;
+    @include respond-to(mobile-only) {
+      @include text(18px, 1.15);
+      margin-bottom: 5px;
+    }
+  }
+  &__call {
+    text-align: center;
+    margin: 0 0 12px 0;
+    @include respond-to(mobile-only) {
+      @include text(28px, 1.15);
+    }
+    @include respond-to(tablet) {
+      @include text(30px, 1.2);
+    }
+
+    @include respond-to(desktop) {
+      @include text(40px, 1.2);
+      line-height: 1.15;
+    }
+  }
+  &__box {
+    display: flex;
+  }
+  &__content {
+    @include respond-to(mobile-only) {
+      margin-right: 10px;
+    }
+  }
+  &__text-box {
+    padding: 10px 0;
+    @include respond-to(desktop) {
+      background-image: url(/images/modal-about/milk.png);
+      background-size: 400px;
+      background-position: top 50% left;
+      background-repeat: no-repeat;
+    }
+  }
+  &__text {
+    padding: 0 10px;
+    @include text(16px, 1.2);
+    color: $font-grey;
+    max-width: 500px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+      @include respond-to(mobile-only) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+.form {
+  display: flex;
+  flex-direction: column;
+
+  @include respond-to(desktop) {
+    margin: 0 auto;
+  }
+}
+.form__field {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 10px;
+
+  @include respond-to(desktop) {
+    margin-bottom: 23px;
+  }
+}
+
+.form__label {
+  margin-bottom: 4px;
+
+  @include text(12px, 1.17);
+  letter-spacing: 0.01em;
+  color: $font-accent;
+}
+
+.form__input {
+  display: block;
+  width: 100%;
+  min-height: 40px;
+
+  text-indent: 20px;
+  padding: 0;
+  color: $font-accent;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  @include transit(border-color, color, outline);
+
+  &:focus {
+    border-color: $font-accent;
+    outline: $font-accent;
+  }
+}
+
+.modal-btn {
+  margin: 0 auto;
+
+  background-color: $bg-button-second;
+  color: $font-white;
+
+  @include transit(background-color, color);
+
+  &:hover,
+  &:focus {
+    background-color: $bg-hero;
+    color: $font-accent;
+  }
+}
