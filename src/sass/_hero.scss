@@ -35,7 +35,7 @@
     font-family: Titan One;
     font-style: normal;
     font-weight: normal;
-    font-size: 34px;
+    font-size: 36px;
     line-height: 39px;
     text-align: center;
     letter-spacing: 0.04em;
@@ -57,6 +57,25 @@
   }
   
   // основные кнопки
+.hero__button-Products{
+  font-size: 8px;
+  line-height: 10px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 14px;
+  padding-right: 14px;
+  border-radius: 20px;
+  border: 0px;
+  @include centered;
+  color: #ffffff;
+  background: #D41443;;
+  transition: background-color 250ms $cubic;
+  &:hover,
+  :focus {
+    background: #C7133E;
+  }
+}
+
   .hero__button {
     font-size: 8px;
     line-height: 10px;
@@ -69,16 +88,17 @@
     @include centered;
     color: #d41443;
     background: #ffffff;
-    transition: background-color 250ms $cubic, color 250ms $cubic;
+    transition: background-color 250ms $cubic;
     &:hover,
     :focus {
-      color: #ffffff;
-      background: #d41443;
+      background: #ECEBEB;
     }
+
+
   }
   .elipse{
     position: relative;
-    left: +10px;
+    left: +11px;
     display: block;
     width: 346px;
     height: 344px;
@@ -174,6 +194,26 @@
   .hero__item + .hero__item {
     margin-left: 8px;
   }
+.hero__button-Products{
+  font-size: 8px;
+  line-height: 10px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 20px;
+  border: 0px;
+  @include centered;
+  color: #ffffff;
+  background: #d41443;
+  transition: background-color 250ms $cubic;
+  &:hover,
+  :focus {
+    
+    background: #C7133E;
+  }
+}
+
   .hero__button {
     font-size: 8px;
     line-height: 10px;
@@ -186,11 +226,10 @@
     @include centered;
     color: #d41443;
     background: #ffffff;
-    transition: background-color 250ms $cubic, color 250ms $cubic;
+    transition: background-color 250ms $cubic;
     &:hover,
     :focus {
-      color: #ffffff;
-      background: #d41443;
+       background: #ECEBEB;
     }
   }
 
@@ -386,6 +425,27 @@
   .hero__item + .hero__item {
     margin-left: 15px;
   }
+
+.hero__button-Products{
+  font-size: 14px;
+  line-height: 18px;
+  border-radius: 20px;
+  border: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  @include centered;
+  color: #ffffff;
+  background: #d41443;
+  transition: background-color 250ms $cubic;
+  &:hover,
+  :focus {
+    
+    background: #C7133E;
+  }
+}
+
   .hero__button {
     font-size: 14px;
     line-height: 18px;
@@ -398,11 +458,11 @@
     @include centered;
     color: #d41443;
     background: #ffffff;
-    transition: background-color 250ms $cubic, color 250ms $cubic;
+    transition: background-color 250ms $cubic;
     &:hover,
     :focus {
-      color: #ffffff;
-      background: #d41443;
+      
+      background: #ECEBEB;
     }
   }
   .box-secondary {
@@ -437,7 +497,8 @@
     &:hover,
     :focus {
       color: #ffffff;
-      background: #d41443;}
+      background: #d41443;
+    }
   }
 
   .hero__svg {
