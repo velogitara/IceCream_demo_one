@@ -3,7 +3,7 @@
     background-color: #ffb8ca;
   }
   .container{
-    width: 320px;
+    
     overflow: hidden;
   }
   .hero{ 
@@ -15,7 +15,7 @@
     .maine-box{
     position: absolute;
     z-index: 1;
-    left: 0%;
+    left: 0;
     bottom: +35%;
    }
    .box-text-title{
@@ -55,28 +55,21 @@
   .hero__item + .hero__item {
     margin-left: 8px;
   }
-  // .hero__item {
-  // }
-
+  
   // основные кнопки
   .hero__button {
     font-size: 8px;
     line-height: 10px;
-
     padding-top: 9px;
     padding-bottom: 9px;
     padding-left: 14px;
     padding-right: 14px;
-    border-radius: 20%;
+    border-radius: 20px;
     border: 0px;
     @include centered;
-    // display: flex;
-    // align-items: center;
-    // text-align: center;
     color: #d41443;
     background: #ffffff;
     transition: background-color 250ms $cubic, color 250ms $cubic;
-
     &:hover,
     :focus {
       color: #ffffff;
@@ -85,6 +78,7 @@
   }
   .elipse{
     position: relative;
+    left: +10px;
     display: block;
     width: 346px;
     height: 344px;
@@ -181,26 +175,18 @@
     margin-left: 8px;
   }
   .hero__button {
-    font-family: DM Sans;
-    font-style: normal;
-    font-weight: normal;
     font-size: 8px;
     line-height: 10px;
     padding-top: 9px;
     padding-bottom: 9px;
     padding-left: 15px;
     padding-right: 15px;
-    border-radius: 25%;
-    
+    border-radius: 20px;
     border: 0px;
-    display: flex;
-    align-items: center;
-    text-align: center;
+    @include centered;
     color: #d41443;
-    background-color: #ffffff;
-    transition-property: background-color, color, transform;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    background: #ffffff;
+    transition: background-color 250ms $cubic, color 250ms $cubic;
     &:hover,
     :focus {
       color: #ffffff;
@@ -289,20 +275,25 @@
   }
 
   .hero__button-arrow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 18px;
     height: 18px;
     border-radius: 50%;
-    background-color: #ffffff;
     border: 0px;
     margin-top: 7px;
+    @include centered;
+    color: #d41443;
+    background: #ffffff;
+    transition: background-color 250ms $cubic, color 250ms $cubic;
+    &:hover,
+    :focus {
+      color: #ffffff;
+      background: #d41443;}
+
+
   }
   .hero__svg {
     fill: currentColor;
-    color: #d41443;
-    width: 5px;
+     width: 5px;
     height: 5px;
   }
 
@@ -398,20 +389,16 @@
   .hero__button {
     font-size: 14px;
     line-height: 18px;
-    display: flex;
-    align-items: center;
-    text-align: center;
     border-radius: 20px;
     border: 0px;
-    color: #d41443;
-    background: #ffffff;
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 20px;
     padding-right: 20px;
-    transition-property: background-color, color, transform;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include centered;
+    color: #d41443;
+    background: #ffffff;
+    transition: background-color 250ms $cubic, color 250ms $cubic;
     &:hover,
     :focus {
       color: #ffffff;
@@ -438,21 +425,23 @@
   }
 
   .hero__button-arrow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 26px;
     height: 26px;
     border-radius: 50%;
-    background-color: #ffffff;
     border: 0px;
-
     margin-top: 20px;
+    @include centered;
+    color: #d41443;
+    background: #ffffff;
+    transition: background-color 250ms $cubic, color 250ms $cubic;
+    &:hover,
+    :focus {
+      color: #ffffff;
+      background: #d41443;}
   }
 
   .hero__svg {
     fill: currentColor;
-    color: #d41443;
     width: 7px;
     height: 7px;
   }
