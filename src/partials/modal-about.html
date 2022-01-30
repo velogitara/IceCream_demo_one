@@ -5,6 +5,89 @@
         <use href="/images/spriteNata.svg#cross"></use>
       </svg>
     </button>
-    <p class="modal__call">Lorem ipsum dolor sit amet.</p>
+    <p class="modal__question sub-title">Do you want to know more?</p>
+    <p class="title modal__call">Lorem ipsum dolor sit amet</p>
+    <div class="modal__box">
+      <div class="modal__content">
+        <picture class="modal__picture">
+          <source
+            media="(min-width: 1280px)"
+            srcset="/images/modal-about/kids.webp 1x, /images/modal-about/kids@2x.webp 2x"
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 1280px)"
+            srcset="/images/modal-about/kids.jpg 1x, /images/modal-about/kids@2x.jpg 2x"
+            type="image/jpg"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="/images/modal-about/kidstab.webp 1x, /images/modal-about/kidstab@2x.webp 2x"
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="/images/modal-about/kidstab.jpg 1x, /images/modal-about/kidstab@2x.jpg 2x"
+            type="image/jpg"
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="/images/modal-about/kidsmob.webp 1x, /images/modal-about/kidsmob@2x.webp 2x"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="/images/modal-about/kidsmob.jpg 1x, /images/modal-about/kidsmob@2x.jpg 2x"
+            type="image/jpg"
+          />
+
+          <img src="/images/modal-about/kidsmob.jpg" alt="Дети кушают мороженое" />
+        </picture>
+        <div class="modal__text-box">
+          <p class="modal__text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores at officia, voluptas
+            atque quae velit.
+          </p>
+          <p class="modal__text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit, voluptas atque quae velit.
+          </p>
+          <p class="modal__text">
+            Exercitationem, suscipit! Explicabo unde tempore impedit. Lorem ipsum dolor sit amet
+            consectetur.
+          </p>
+        </div>
+      </div>
+      <form class="form">
+        <label for="name" class="form__field">
+          <span class="form__label">Name</span>
+          <input class="form__input" type="text" name="name" id="name" />
+        </label>
+
+        <label for="tel" class="form__field">
+          <span class="form__label">Phone number</span>
+          <input class="form__input" type="tel" name="tel" id="tel" />
+        </label>
+
+        <label for="mail" class="form__field">
+          <span class="form__label">E-mail</span>
+          <input class="form__input" type="email" name="mail" id="mail" />
+        </label>
+
+        <label class="form__field" for="city">
+          <span class="form__label">Choose the city</span>
+          <select class="form__input" id="city" name="city">
+            <option value="chicago">Chicago</option>
+            <option value="new-york">New-York</option>
+          </select>
+        </label>
+
+        <label class="form__field">
+          <span class="form__label">Number of persons</span>
+          <input class="form__input" type="number" value=" " min="1" max="10" />
+        </label>
+
+        <button class="btn-primary modal-btn" type="submit">Send</button>
+      </form>
+    </div>
   </div>
 </div>

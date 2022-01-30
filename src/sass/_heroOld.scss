@@ -2,24 +2,7 @@
   .hero-section {
     background-color: #ffb8ca;
   }
-  .container {
-    overflow: hidden;
-  }
-  .hero {
-    position: relative;
-    padding-top: 27px;
-    padding-bottom: 75px;
-  }
 
-  .maine-box {
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    bottom: +35%;
-  }
-  .box-text-title {
-    width: 164px;
-  }
   .hero__title {
     font-family: Titan One;
     font-style: normal;
@@ -34,7 +17,7 @@
     font-family: Titan One;
     font-style: normal;
     font-weight: normal;
-    font-size: 36px;
+    font-size: 34px;
     line-height: 39px;
     text-align: center;
     letter-spacing: 0.04em;
@@ -54,64 +37,43 @@
   .hero__item + .hero__item {
     margin-left: 8px;
   }
+  // .hero__item {
+  // }
 
   // основные кнопки
-  .hero__button-Products {
-    font-size: 8px;
-    line-height: 10px;
-    padding-top: 9px;
-    padding-bottom: 9px;
-    padding-left: 14px;
-    padding-right: 14px;
-    border-radius: 20px;
-    border: 0px;
-    @include centered;
-    color: #ffffff;
-    background: #d41443;
-    transition: background-color 250ms $cubic;
-    &:hover,
-    :focus {
-      background: #c7133e;
-    }
-  }
-
   .hero__button {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
     font-size: 8px;
     line-height: 10px;
     padding-top: 9px;
     padding-bottom: 9px;
     padding-left: 14px;
     padding-right: 14px;
-    border-radius: 20px;
+    border-radius: 20%;
     border: 0px;
-    @include centered;
+    display: flex;
+    align-items: center;
+    text-align: center;
     color: #d41443;
     background: #ffffff;
-    transition: background-color 250ms $cubic;
+    transition-property: background-color, color, transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     &:hover,
     :focus {
-      background: #ecebeb;
+      color: #ffffff;
+      background: #d41443;
     }
-  }
-
-  .elipse {
-    position: relative;
-    left: +11px;
-    display: block;
-    width: 346px;
-    height: 344px;
-    border-radius: 50%;
-    background-color: #ffa5ba;
   }
 
   .hero__main-img {
-    z-index: 0;
-    position: absolute;
-    right: +32%;
-    bottom: -22%;
     width: 171px;
     height: 410px;
     display: block;
+    max-width: 100%;
+    height: auto;
   }
 
   .hero__button-arrow {
@@ -121,15 +83,6 @@
     display: none;
   }
   .box-elipse {
-    display: none;
-  }
-  .hero__iceCreamGirl-img {
-    display: none;
-  }
-  .hero__bottle-img {
-    display: none;
-  }
-  .hero__text {
     display: none;
   }
 }
@@ -146,11 +99,10 @@
     display: flex;
   }
   .maine-box {
-    position: relative;
     display: flex;
     flex-direction: column;
     padding-top: 42px;
-    padding-bottom: 38px;
+    padding-bottom: 56px;
     margin-right: 39px;
   }
 
@@ -190,41 +142,30 @@
   .hero__item + .hero__item {
     margin-left: 8px;
   }
-  .hero__button-Products {
-    font-size: 8px;
-    line-height: 10px;
-    padding-top: 9px;
-    padding-bottom: 9px;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-radius: 20px;
-    border: 0px;
-    @include centered;
-    color: #ffffff;
-    background: #d41443;
-    transition: background-color 250ms $cubic;
-    &:hover,
-    :focus {
-      background: #c7133e;
-    }
-  }
-
   .hero__button {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
     font-size: 8px;
     line-height: 10px;
     padding-top: 9px;
     padding-bottom: 9px;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-radius: 20px;
+    padding-left: 14px;
+    padding-right: 14px;
+    border-radius: 20%;
     border: 0px;
-    @include centered;
+    display: flex;
+    align-items: center;
+    text-align: center;
     color: #d41443;
-    background: #ffffff;
-    transition: background-color 250ms $cubic;
+    background-color: #ffffff;
+    transition-property: background-color, color, transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     &:hover,
     :focus {
-      background: #ecebeb;
+      color: #ffffff;
+      background: #d41443;
     }
   }
 
@@ -291,11 +232,6 @@
     text-transform: uppercase;
     color: #d41443;
   }
-  .box-tex {
-    position: absolute;
-    right: -90px;
-    bottom: +15%;
-  }
   .box__text {
     font-family: DM Sans;
     font-style: normal;
@@ -307,23 +243,19 @@
   }
 
   .hero__button-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 18px;
     height: 18px;
     border-radius: 50%;
+    background-color: #ffffff;
     border: 0px;
     margin-top: 7px;
-    @include centered;
-    color: #d41443;
-    background: #ffffff;
-    transition: background-color 250ms $cubic, color 250ms $cubic;
-    &:hover,
-    :focus {
-      color: #ffffff;
-      background: #d41443;
-    }
   }
   .hero__svg {
     fill: currentColor;
+    color: #d41443;
     width: 5px;
     height: 5px;
   }
@@ -331,35 +263,18 @@
   .hero__bottle-img {
     width: 124px;
     height: 126px;
-    margin-top: 19px;
-  }
-
-  .elipse {
-    position: relative;
-    top: 0;
-    z-index: 0;
-    margin-left: 111px;
     display: block;
-    min-width: 324px;
-    height: 322px;
-    border-radius: 50%;
-    background-color: #ffa5ba;
+    width: 100%;
+    height: auto;
   }
   .hero__main-img {
-    position: absolute;
-    left: +20%;
-    bottom: -12%;
+    width: 143px;
+    height: 336px;
+    display: block;
+    max-width: 100%;
+    height: auto;
   }
-  .box-elipse {
-    margin-left: 87px;
-    margin-right: auto;
-    padding-top: 40px;
-    // padding-bottom: px;
-  }
-  .hero__iceCreamGirl-img {
-    position: absolute;
-    right: -35%;
-    bottom: -12%;
+  .hero__icecreamgirl-img {
     width: 168px;
     height: 133px;
     display: block;
@@ -367,7 +282,7 @@
     height: auto;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1280px) and (max-width: 1920px) {
   .hero-section {
     background-color: #ffb8ca;
   }
@@ -376,8 +291,8 @@
     display: flex;
   }
   .maine-box {
-    position: relative;
-
+    display: flex;
+    flex-direction: column;
     padding-top: 42px;
     padding-bottom: 56px;
     margin-right: 83px;
@@ -416,53 +331,40 @@
   .hero__item + .hero__item {
     margin-left: 15px;
   }
-
-  .hero__button-Products {
-    font-size: 14px;
-    line-height: 18px;
-    border-radius: 20px;
-    border: 0px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
-    @include centered;
-    color: #ffffff;
-    background: #d41443;
-    transition: background-color 250ms $cubic;
-    &:hover,
-    :focus {
-      background: #c7133e;
-    }
-  }
-
   .hero__button {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
     font-size: 14px;
     line-height: 18px;
-    border-radius: 20px;
-    border: 0px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
-    @include centered;
-    color: #d41443;
-    background: #ffffff;
-    transition: background-color 250ms $cubic;
-    &:hover,
-    :focus {
-      background: #ecebeb;
-    }
-  }
-  .box-secondary {
     display: flex;
     align-items: center;
-    margin-top: 36px;
+    text-align: center;
+    border-radius: 20px;
+    border: 0px;
+    color: #d41443;
+    background: #ffffff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition-property: background-color, color, transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    :focus {
+      color: #ffffff;
+      background: #d41443;
+    }
+  }
+  .box-secodary {
+    display: flex;
+    align-items: center;
+    margin-top: 56px;
   }
   .box-text-title {
     text-align: start;
   }
-
   .hero__text {
     display: block;
     font-family: DM Sans;
@@ -474,26 +376,30 @@
   }
 
   .hero__button-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 26px;
     height: 26px;
     border-radius: 50%;
+    background-color: #ffffff;
     border: 0px;
+
     margin-top: 20px;
-    @include centered;
-    color: #d41443;
-    background: #ffffff;
-    transition: background-color 250ms $cubic, color 250ms $cubic;
-    &:hover,
-    :focus {
-      color: #ffffff;
-      background: #d41443;
-    }
   }
 
   .hero__svg {
     fill: currentColor;
+    color: #d41443;
     width: 7px;
     height: 7px;
+  }
+  .elipse {
+    display: block;
+    width: 538px;
+    height: 538px;
+    border-radius: 50%;
+    background-color: #ffa5ba;
   }
 
   // белые 2 эллипса и цифры
@@ -501,7 +407,7 @@
   .box-elipse {
     margin-left: 140px;
     margin-right: auto;
-    padding-top: 40px;
+    padding-top: 100px;
     // padding-bottom: px;
   }
   .white-elipse-first {
@@ -553,36 +459,26 @@
     color: #ffffff;
   }
 
-  .box-tex {
-    position: absolute;
-    right: -30%;
-    bottom: +10%;
-    min-width: 190px;
-  }
-
   // картинки
-
-  .elipse {
-    position: relative;
-    top: -70px;
-    z-index: 0;
-
+  .hero__bottle-img {
+    width: 188px;
     display: block;
-    min-width: 538px;
-    height: 538px;
-    border-radius: 50%;
-    background-color: #ffa5ba;
+    width: 100%;
+    height: auto;
+    margin-right: 30px;
   }
   .hero__main-img {
-    position: absolute;
-    bottom: -84px;
-    left: 23%;
+    width: 236px;
+    height: 557px;
+    display: block;
+    max-width: 100%;
+    height: auto;
   }
-  .hero__iceCreamGirl-img {
-    position: absolute;
-
-    bottom: -84px;
-
-    left: 80%;
+  .hero__icecreamgirl-img {
+    width: 293px;
+    height: 232px;
+    display: block;
+    max-width: 100%;
+    height: auto;
   }
 }
