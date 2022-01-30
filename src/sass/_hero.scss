@@ -212,10 +212,6 @@
   color: #ffffff;
 }
 
-// .hero__boxNumberOneContainer {
-//   position: relative;
-// }
-
 .hero__boxCircleOne {
   position: absolute;
   top: -3px;
@@ -237,6 +233,12 @@
   min-height: 16px;
   background-color: $bg-button-first;
   border-radius: 50%;
+}
+
+.hero__Girl {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 // .box-elipse {
