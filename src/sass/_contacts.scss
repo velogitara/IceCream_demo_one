@@ -1,4 +1,6 @@
 .contacts-section {
+  position: relative;
+
   background-image: linear-gradient(to bottom, #fff 5%, #fff5f6 5%, #fff5f6);
 
   @include respond-to(tablet) {
@@ -7,7 +9,7 @@
 
   @include respond-to(desktop) {
     background-image: url(../images/contacts/spots.png),
-      linear-gradient(to bottom, #fff 15%, #fff5f6 15%, #fff5f6);
+      linear-gradient(to bottom, #fff 20%, #fff5f6 20%, #fff5f6);
 
     background-repeat: no-repeat;
     background-size: contain 80%;
@@ -23,7 +25,7 @@
 }
 
 .title-hidden {
-  visibility: hidden;
+  display: none;
   margin: 0;
 }
 
@@ -32,15 +34,20 @@
 }
 
 .contacts__card-set {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 54px;
+
   @include respond-to(tablet) {
     display: flex;
     width: auto;
     flex-basis: calc((100% - 40px) / 3);
+    margin-bottom: 81px;
   }
 
   @include respond-to(desktop) {
     width: auto;
-    margin-bottom: 81px;
+    margin-bottom: 86px;
   }
 }
 .contacts__card {
@@ -48,14 +55,16 @@
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
 
-  @include respond-to(mobile-only) {
-    width: auto;
+  @include respond-to(mobile) {
+    // width: auto;
     padding-top: 43px;
     padding-bottom: 43px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 17px;
+    padding-right: 19px;
 
     position: relative;
+
+    width: 220px;
 
     &:not(:last-child) {
       margin-bottom: 20px;
@@ -74,8 +83,6 @@
   }
 
   @include respond-to(desktop) {
-    // &:not(:last-child) {
-    //   margin-right: 31px;
     flex-basis: calc((100% - 62px) / 3);
   }
 }
@@ -192,23 +199,33 @@
   justify-content: center;
   align-items: center;
 
-  margin-top: 54px;
-  margin-left: 60px;
+  // margin-bottom: 60px;
   margin-right: auto;
   margin-left: auto;
 
   @include respond-to(mobile) {
-    padging-bottom: 60px;
+    padding-bottom: 60px;
   }
 
   @include respond-to(tablet) {
     flex-direction: row;
+    padding-bottom: 80px;
+  }
+}
+
+.contacts__button-item {
+  margin-bottom: 10px;
+
+  @include respond-to(tablet) {
+    margin-right: 15px;
+  }
+  @include respond-to(desktop) {
+    margin-bottom: 85px;
   }
 }
 
 .btn-primary__width {
   min-width: 161px;
-  margin-bottom: 10px;
 
   @include respond-to(tablet) {
     width: 191px;
@@ -245,14 +262,10 @@
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @include respond-to(tablet) {
-    margin-right: 15px;
     min-width: 191;
-
-    margin-bottom: 81px;
   }
 
   @include respond-to(desktop) {
-    margin-right: 15px;
     min-width: 198;
   }
 }
@@ -280,14 +293,10 @@
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @include respond-to(tablet) {
-    margin-right: 15px;
     min-width: 191;
-
-    margin-bottom: 81px;
   }
 
   @include respond-to(desktop) {
-    margin-right: 15px;
     min-width: 198;
   }
 }
@@ -300,4 +309,148 @@
 .btn-primary-contacts:hover,
 .btn-primary-contacts:active {
   box-shadow: 0px 4px 4px #fea5bb;
+}
+// <---Modal-->
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffa5ba(0, 0, 0, 0.2);
+
+  transition: 0.5s linear;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+
+  transform: matrix(1, 2, 3, 4, 5, 6);
+  transition: 0.5s ease;
+}
+
+.modal {
+  display: none;
+  background: #337ab7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99999;
+}
+.modal_vis {
+  display: block;
+}
+.body_block {
+  overflow: hidden;
+  margin-right: 17px;
+}
+.close_modal {
+  color: #bfe2ff;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: Times, sans-serif;
+  border-radius: 50%;
+  border: 4px solid #bfe2ff;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  margin: 20px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  transform: rotate(45deg);
+  transition: all 0.6s;
+  box-sizing: content-box;
+}
+.close_modal:hover {
+  color: #fff;
+  transform: rotate(135deg);
+}
+.modal_txt {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 16px 20px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  padding: 30px;
+  margin: 100px auto;
+  max-width: 800px;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+
+  transition: 0.5s linear;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+
+  transform: matrix(1, 2, 3, 4, 5, 6);
+  transition: 0.5s ease;
+}
+
+.modal {
+  position: absolute;
+  width: 90%;
+  max-width: 528px;
+  top: 94px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-color: #ffffff;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 40px;
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+    height: 609px;
+  }
+  @media screen and (min-width: 768px) {
+    top: 208px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+  }
+}
+
+.modal__close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 8px;
+  right: 8px;
+
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.modal__close__icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: #000;
+}
+.modal__close:hover svg,
+.modal__close:focus svg {
 }
