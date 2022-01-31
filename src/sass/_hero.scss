@@ -34,8 +34,8 @@
     font-family: Titan One;
     font-style: normal;
     font-weight: normal;
-    font-size: 36px;
-    line-height: 39px;
+    font-size:48px; 
+    line-height:0.96;
     text-align: center;
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -59,8 +59,8 @@
   .hero__button-Products {
     font-size: 8px;
     line-height: 10px;
-    padding-top: 9px;
-    padding-bottom: 9px;
+    padding-top: 7px;
+    padding-bottom: 7px;
     padding-left: 14px;
     padding-right: 14px;
     border-radius: 20px;
@@ -78,8 +78,8 @@
   .hero__button {
     font-size: 8px;
     line-height: 10px;
-    padding-top: 9px;
-    padding-bottom: 9px;
+    padding-top: 7px;
+    padding-bottom: 7px;
     padding-left: 14px;
     padding-right: 14px;
     border-radius: 20px;
@@ -96,7 +96,7 @@
 
   .elipse {
     position: relative;
-    left: +11px;
+    left: 20px;
     display: block;
     width: 346px;
     height: 344px;
@@ -107,7 +107,7 @@
   .hero__main-img {
     z-index: 0;
     position: absolute;
-    right: +32%;
+    right: +28%;
     bottom: -22%;
     width: 171px;
     height: 410px;
@@ -133,6 +133,7 @@
     display: none;
   }
 }
+// -------------------------Tablet------------------------------
 @media (min-width: 768px) and (max-width: 1279px) {
   .hero-section {
     background-color: #ffb8ca;
@@ -149,9 +150,9 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    padding-top: 42px;
-    padding-bottom: 38px;
-    margin-right: 39px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    // margin-right: 39px;
   }
 
   .hero__title {
@@ -193,8 +194,8 @@
   .hero__button-Products {
     font-size: 8px;
     line-height: 10px;
-    padding-top: 9px;
-    padding-bottom: 9px;
+    padding-top: 7px;
+    padding-bottom: 7px;
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 20px;
@@ -212,8 +213,8 @@
   .hero__button {
     font-size: 8px;
     line-height: 10px;
-    padding-top: 9px;
-    padding-bottom: 9px;
+    padding-top: 7px;
+    padding-bottom: 7px;
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 20px;
@@ -231,7 +232,7 @@
   .box-secodary {
     display: flex;
     align-items: center;
-    margin-top: 19px;
+    
   }
 
   .hero__text {
@@ -258,7 +259,7 @@
     height: 16px;
     border-radius: 50%;
     background-color: #ffffff;
-    margin-bottom: 62px;
+    margin-bottom: 35px;
   }
   .white-elipse-second {
     display: block;
@@ -293,8 +294,8 @@
   }
   .box-tex {
     position: absolute;
-    right: -90px;
-    bottom: +15%;
+    right: -55px;
+    bottom: +11%;
   }
   .box__text {
     font-family: DM Sans;
@@ -315,13 +316,12 @@
     @include centered;
     color: #d41443;
     background: #ffffff;
-    transition: background-color 250ms $cubic, color 250ms $cubic;
-    &:hover,
-    :focus {
-      color: #ffffff;
-      background: #d41443;
-    }
-  }
+    @include transit(transform);
+    &:hover {
+      transform: scale(1.3);}
+    } 
+
+    
   .hero__svg {
     fill: currentColor;
     width: 5px;
@@ -329,16 +329,16 @@
   }
 
   .hero__bottle-img {
-    width: 124px;
-    height: 126px;
+   
     margin-top: 19px;
+    margin-right: 0px;
   }
 
   .elipse {
     position: relative;
-    top: 0;
+    top: -57px;
     z-index: 0;
-    margin-left: 111px;
+    margin-left: 106px;
     display: block;
     min-width: 324px;
     height: 322px;
@@ -348,18 +348,18 @@
   .hero__main-img {
     position: absolute;
     left: +20%;
-    bottom: -12%;
+    bottom: -57px;
   }
   .box-elipse {
     margin-left: 87px;
     margin-right: auto;
-    padding-top: 40px;
+    padding-top: 0px;
     // padding-bottom: px;
   }
   .hero__iceCreamGirl-img {
     position: absolute;
-    right: -35%;
-    bottom: -12%;
+    right: -28%;
+    bottom: -57px;
     width: 168px;
     height: 133px;
     display: block;
@@ -367,6 +367,7 @@
     height: auto;
   }
 }
+// ------------------------------Des-------------------------------
 @media (min-width: 1280px) {
   .hero-section {
     background-color: #ffb8ca;
@@ -482,12 +483,9 @@
     @include centered;
     color: #d41443;
     background: #ffffff;
-    transition: background-color 250ms $cubic, color 250ms $cubic;
-    &:hover,
-    :focus {
-      color: #ffffff;
-      background: #d41443;
-    }
+    @include transit(transform);
+    &:hover {
+      transform: scale(1.3);}
   }
 
   .hero__svg {
