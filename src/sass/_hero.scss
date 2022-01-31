@@ -1,10 +1,29 @@
 @include respond-to(mobile-only) {
+  @media   (max-width: 387px){
+    .container {
+      overflow: hidden;
+    }
+  }
+
+  @media (min-width: 388px) and (max-width: 767px) {
+    .container{
+      overflow: visible;
+     
+    }
+    .hero{
+      width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+  }
+
   .hero-section {
     background-color: #ffb8ca;
   }
-  .container {
-    overflow: hidden;
-  }
+  // .container {
+  //   overflow: hidden;
+  // }
   .hero {
     position: relative;
     padding-top: 27px;
@@ -57,6 +76,7 @@
 
   // основные кнопки
   .hero__button-Products {
+    cursor: pointer;
     font-size: 8px;
     line-height: 10px;
     padding-top: 7px;
@@ -76,6 +96,7 @@
   }
 
   .hero__button {
+    cursor: pointer;
     font-size: 8px;
     line-height: 10px;
     padding-top: 7px;
@@ -192,6 +213,7 @@
     margin-left: 8px;
   }
   .hero__button-Products {
+    cursor: pointer;
     font-size: 8px;
     line-height: 10px;
     padding-top: 7px;
@@ -211,6 +233,7 @@
   }
 
   .hero__button {
+    cursor: pointer;
     font-size: 8px;
     line-height: 10px;
     padding-top: 7px;
@@ -308,6 +331,7 @@
   }
 
   .hero__button-arrow {
+    cursor: pointer;
     width: 18px;
     height: 18px;
     border-radius: 50%;
@@ -381,8 +405,15 @@
 
     padding-top: 42px;
     padding-bottom: 56px;
-    margin-right: 83px;
+    // margin-right: 83px;
   }
+
+   .basic-content{
+     position: relative;
+     left: 45px;
+     top: 0;
+   }
+
   .hero__title {
     font-family: Titan One;
     font-style: normal;
@@ -419,6 +450,7 @@
   }
 
   .hero__button-Products {
+    cursor: pointer;
     font-size: 14px;
     line-height: 18px;
     border-radius: 20px;
@@ -438,6 +470,7 @@
   }
 
   .hero__button {
+    cursor: pointer;
     font-size: 14px;
     line-height: 18px;
     border-radius: 20px;
@@ -475,6 +508,7 @@
   }
 
   .hero__button-arrow {
+    cursor: pointer;
     width: 26px;
     height: 26px;
     border-radius: 50%;
@@ -497,10 +531,10 @@
   // белые 2 эллипса и цифры
 
   .box-elipse {
-    margin-left: 140px;
+    margin-left: 220px;
     margin-right: auto;
     padding-top: 40px;
-    // padding-bottom: px;
+    
   }
   .white-elipse-first {
     display: block;
@@ -520,6 +554,8 @@
 
   .white-elipse-first {
     position: relative;
+    // right: 0;
+    // bottom: 0;
   }
   .white-elipse-second {
     position: relative;
@@ -553,18 +589,18 @@
 
   .box-tex {
     position: absolute;
-    right: -30%;
+    right: -35%;
     bottom: +10%;
     min-width: 190px;
   }
 
-  // картинки
+  //---- картинки-----
 
   .elipse {
     position: relative;
-    top: -70px;
+    top: -49px;
+    left: +12%;
     z-index: 0;
-
     display: block;
     min-width: 538px;
     height: 538px;
@@ -573,13 +609,13 @@
   }
   .hero__main-img {
     position: absolute;
-    bottom: -84px;
+    bottom: -63px;
     left: 23%;
   }
   .hero__iceCreamGirl-img {
     position: absolute;
 
-    bottom: -84px;
+    bottom: -63px;
 
     left: 80%;
   }
