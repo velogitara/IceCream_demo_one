@@ -7,14 +7,11 @@
 
   @include respond-to(desktop) {
     background-image: url(../images/contacts/spots.png),
-      linear-gradient(to bottom, #fff 25%, #fff5f6 15%, #fff5f6);
-    background-color: #ffffff;
+      linear-gradient(to bottom, #fff 15%, #fff5f6 15%, #fff5f6);
 
     background-repeat: no-repeat;
     background-size: contain 80%;
     background-position: center;
-
-    width: 100%;
 
     padding: 72px 0;
 
