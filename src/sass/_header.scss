@@ -85,7 +85,7 @@
 
   @include respond-to(tablet) {
     top: 15px;
-    left: 490px;
+    left: 520px;
 
     &.is-open {
       top: 23px;
@@ -100,7 +100,6 @@
 
 .menu-container {
   @include respond-to(tablet-only) {
-    /*position: fixed;*/
     display: none;
     overflow: hidden;
     top: 0;
@@ -138,7 +137,7 @@
   width: 209px;
   margin-bottom: 20px;
   margin-top: 60px;
-  margin-left: auto;
+  margin-left: 110px;
   margin-right: auto;
 
   @include transit(background-color);
