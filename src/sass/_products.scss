@@ -44,17 +44,15 @@
 .products__title {
   margin-bottom: 138px;
 
-  //   @media screen and (min-width: 768px) {
-  //     margin-bottom: 138px;
-  //   }
-
   @media screen and (min-width: 1280px) {
     margin-bottom: 226px;
   }
 }
+
 .products__list {
   @media screen and (min-width: 768px) {
     display: flex;
+    align-items: flex-start;
   }
 }
 .products__subtitle {
