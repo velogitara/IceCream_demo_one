@@ -23,11 +23,6 @@
   }
 }
 
-<<<<<<< HEAD
-.title-hidden {
-  display: none;
-  margin: 0;
-=======
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -39,7 +34,6 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
->>>>>>> parent of b41652e (Merge branch 'devOLD' into contactsBugs)
 }
 
 .contacts-container {
@@ -47,12 +41,9 @@
 }
 
 .contacts__card-set {
-<<<<<<< HEAD
   margin-left: auto;
   margin-right: auto;
-=======
-  margin: 0 auto;
->>>>>>> parent of b41652e (Merge branch 'devOLD' into contactsBugs)
+
   margin-bottom: 54px;
 
   @include respond-to(tablet) {
@@ -62,32 +53,29 @@
   }
 
   @include respond-to(desktop) {
-<<<<<<< HEAD
     width: auto;
     margin-bottom: 86px;
   }
-=======
-    flex-basis: calc((100% - 62px) / 3);
-  }
-  &:not(:last-child) {
-    @include respond-to(mobile-only) {
-      margin-bottom: 20px;
-    }
-    @include respond-to(tablet) {
-      margin-right: 20px;
-    }
-    @include respond-to(desktop) {
-      margin-right: 31px;
-    }
-  }
->>>>>>> parent of b41652e (Merge branch 'devOLD' into contactsBugs)
+
+  flex-basis: calc((100% - 62px) / 3);
 }
+&:not(:last-child) {
+  @include respond-to(mobile-only) {
+    margin-bottom: 20px;
+  }
+  @include respond-to(tablet) {
+    margin-right: 20px;
+  }
+  @include respond-to(desktop) {
+    margin-right: 31px;
+  }
+}
+
 .contacts__card {
   background: #ffffff;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
   margin: 0 auto;
-<<<<<<< HEAD
 
   @include respond-to(mobile) {
     padding-top: 43px;
@@ -118,25 +106,6 @@
 
   @include respond-to(desktop) {
     flex-basis: calc((100% - 62px) / 3);
-=======
-  padding: 43px 18px;
-
-  position: relative;
-
-  // @include respond-to(mobile) {
-  //   width: 220px;
-  //   // text-align: center;
-  //   margin: 0 auto;
-  // }
-
-  @include respond-to(tablet) {
-    padding: 50px 32px;
-    width: auto;
-  }
-  @include respond-to(desktop) {
-    padding: 51px 43px 62px;
-    width: auto;
->>>>>>> parent of b41652e (Merge branch 'devOLD' into contactsBugs)
   }
 }
 .contacts-card_item {
@@ -252,7 +221,6 @@
   justify-content: center;
   align-items: center;
 
-<<<<<<< HEAD
   // margin-bottom: 60px;
   margin-right: auto;
   margin-left: auto;
@@ -260,9 +228,6 @@
   @include respond-to(mobile) {
     padding-bottom: 60px;
   }
-=======
-  margin: 0 auto 60px;
->>>>>>> parent of b41652e (Merge branch 'devOLD' into contactsBugs)
 
   @include respond-to(tablet) {
     flex-direction: row;
@@ -271,7 +236,6 @@
 }
 
 .contacts__button-item {
-<<<<<<< HEAD
   margin-bottom: 10px;
 
   @include respond-to(tablet) {
@@ -279,115 +243,101 @@
   }
   @include respond-to(desktop) {
     margin-bottom: 85px;
-=======
-  &:not(:last-child) {
-    @include respond-to(mobile-only) {
-      margin-bottom: 10px;
+
+    &:not(:last-child) {
+      @include respond-to(mobile-only) {
+        margin-bottom: 10px;
+      }
     }
+  }
+
+  .btn-primary__width {
+    min-width: 161px;
+
     @include respond-to(tablet) {
-      margin-right: 15px;
+      width: 191px;
     }
->>>>>>> parent of b41652e (Merge branch 'devOLD' into contactsBugs)
+    @include respond-to(desktop) {
+      width: 198px;
+    }
   }
-}
-
-.btn-primary__width {
-  min-width: 161px;
-
-  @include respond-to(tablet) {
-    width: 191px;
-  }
-  @include respond-to(desktop) {
-    width: 198px;
-  }
-}
-.btn-icon {
-  fill: none;
-  margin-left: 15px;
-}
-
-.btn-primary-contacts {
-  @include centered;
-  padding-top: 10px;
-
-  height: 44px;
-
-  font-family: inherit;
-  @include text(16px, 1.31, 700);
-  color: $font-accent;
-
-  background-color: $bg-button-first;
-
-  border-radius: 22px;
-  border-color: transparent;
-
-  cursor: pointer;
-
-  align-items: baseline;
-  justify-content: center;
-
-<<<<<<< HEAD
-  box-shadow: 250ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
-  transition: background-color 250ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
-=======
-  @include transit(box-shadow, background-color);
->>>>>>> parent of b41652e (Merge branch 'devOLD' into contactsBugs)
-
-  @include respond-to(tablet) {
-    min-width: 191;
+  .btn-icon {
+    fill: none;
+    margin-left: 15px;
   }
 
-  @include respond-to(desktop) {
-<<<<<<< HEAD
-    min-width: 198;
-=======
-    min-width: 198px;
->>>>>>> parent of b41652e (Merge branch 'devOLD' into contactsBugs)
-  }
-}
+  .btn-primary-contacts {
+    @include centered;
+    padding-top: 10px;
 
-.btn-secondary-contacts {
-  @include centered;
-  padding-top: 10px;
+    height: 44px;
 
-<<<<<<< HEAD
-  height: 44px;
+    font-family: inherit;
+    @include text(16px, 1.31, 700);
+    color: $font-accent;
 
-  font-family: inherit;
-  @include text(16px, 1.31, 700);
-  color: $bg-button-first;
+    background-color: $bg-button-first;
 
-  background-color: $bg-button-second;
+    border-radius: 22px;
+    border-color: transparent;
 
-  border-radius: 22px;
-  border-color: transparent;
+    cursor: pointer;
 
-  cursor: pointer;
+    align-items: baseline;
+    justify-content: center;
 
-  align-items: baseline;
-  justify-content: center;
-  box-shadow: 250ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
-  transition: background-color 250ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    box-shadow: 250ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    transition: background-color 250ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
 
-  @include respond-to(tablet) {
-    min-width: 191;
+    @include transit(box-shadow, background-color);
+
+    @include respond-to(tablet) {
+      min-width: 191;
+    }
+
+    @include respond-to(desktop) {
+      min-width: 198;
+    }
   }
 
-  @include respond-to(desktop) {
-    min-width: 198;
+  .btn-secondary-contacts {
+    @include centered;
+    padding-top: 10px;
+
+    height: 44px;
+
+    font-family: inherit;
+    @include text(16px, 1.31, 700);
+    color: $bg-button-first;
+
+    background-color: $bg-button-second;
+
+    border-radius: 22px;
+    border-color: transparent;
+
+    cursor: pointer;
+
+    align-items: baseline;
+    justify-content: center;
+    box-shadow: 250ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    transition: background-color 250ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+
+    @include respond-to(tablet) {
+      min-width: 191;
+    }
+
+    @include respond-to(desktop) {
+      min-width: 198;
+    }
   }
-=======
-  color: $bg-button-first;
-  background-color: $bg-button-second;
->>>>>>> parent of b41652e (Merge branch 'devOLD' into contactsBugs)
-}
 
-.btn-secondary-contacts:hover,
-.btn-secondary-contacts:active {
-  box-shadow: 0px 4px 4px #fea5bb;
-}
+  .btn-secondary-contacts:hover,
+  .btn-secondary-contacts:active {
+    box-shadow: 0px 4px 4px #fea5bb;
+  }
 
-.btn-primary-contacts:hover,
-.btn-primary-contacts:active {
-  box-shadow: 0px 4px 4px #fea5bb;
+  .btn-primary-contacts:hover,
+  .btn-primary-contacts:active {
+    box-shadow: 0px 4px 4px #fea5bb;
+  }
 }
