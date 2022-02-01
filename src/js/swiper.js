@@ -19,7 +19,7 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 
-  // scrollbar: {
-  //   el: '.swiper-scrollbar',
-  // },
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
 });
