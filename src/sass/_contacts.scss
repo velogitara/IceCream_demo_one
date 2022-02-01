@@ -54,7 +54,7 @@
   background: #ffffff;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
-  margin: auto;
+  margin: 0 auto;
 
   @include respond-to(mobile) {
     padding-top: 43px;
