@@ -131,6 +131,19 @@
     width: 171px;
     height: 410px;
     display: block;
+    animation-name:opacity;
+    animation-duration: 3000ms;
+    animation-timing-function: linear;
+   
+     
+    
+       
+     }
+   
+   @keyframes opacity{
+       from { opacity: 0; }
+       to   { opacity: 1; }
+        
   }
 
   .hero__button-arrow {
@@ -269,12 +282,7 @@
 
   // белые 2 эллипса и цифры
 
-  // .box-elipse{
-  //   margin-left: px;
-  //   margin-right: auto;
-  //   padding-top: px;
-  //   padding-bottom: px;
-  // }
+  
 
   .white-elipse-first {
     display: block;
@@ -370,10 +378,35 @@
     border-radius: 50%;
     background-color: #ffa5ba;
   }
+
+
+
+  .hero__bottle-img{
+    animation-name:opacity;
+    animation-duration: 3000ms;
+    animation-timing-function: linear;
+    animation-delay : 3000ms;
+    }
+  
+  @keyframes opacity{
+      from { opacity: 0; }
+      to   { opacity: 1; }
+       }
+
+
   .hero__main-img {
     position: absolute;
     left: +20%;
     bottom: -59px;
+    animation-name:opacity;
+    animation-duration: 5000ms;
+    animation-timing-function: linear;
+    }
+   
+   @keyframes opacity{
+       from { opacity: 0; }
+       to   { opacity: 1; }
+        
   }
   .box-elipse {
     margin-left: 87px;
@@ -390,7 +423,20 @@
     display: block;
     max-width: 100%;
     height: auto;
-  }
+    animation-name:opacity;
+    animation-duration: 3000ms;
+    animation-timing-function: linear;
+    animation-delay : 3000ms;
+     
+    
+       
+     }
+   
+   @keyframes opacity{
+       from { opacity: 0; }
+       to   { opacity: 1; }
+        }
+  
 }
 // ------------------------------Des-------------------------------
 @media (min-width: 1280px) {
@@ -614,12 +660,47 @@
     position: absolute;
     bottom: -59px;
     left: 23%;
+    animation: opacity 5000ms;
+    }
+  @keyframes opacity {
+      from { opacity: 0; }
+      to   { opacity: 1; }
   }
+
+  .hero__bottle-img{
+    animation-name:opacity;
+    animation-duration: 3000ms;
+    animation-timing-function: linear;
+    animation-delay : 3000ms;
+    }
+  
+  @keyframes opacity{
+      from { opacity: 0; }
+      to   { opacity: 1; }
+       }
+
+
+
   .hero__iceCreamGirl-img {
-    position: absolute;
+   position: absolute;
+   bottom: -59px;
+   left: 77%;
+   
+   animation-name:opacity;
+   animation-duration: 3000ms;
+   animation-timing-function: linear;
+   animation-delay : 3000ms;
+    
+   
+      
+    }
+  
+  @keyframes opacity{
+      from { opacity: 0; }
+      to   { opacity: 1; }
+       }
+    
+  
 
-    bottom: -59px;
-
-    left: 77%;
-  }
+  
 }
