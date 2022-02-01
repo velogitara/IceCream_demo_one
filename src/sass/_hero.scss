@@ -1,15 +1,11 @@
 @include respond-to(mobile-only) {
-  @media   (max-width: 387px){
-    .container {
-      overflow: hidden;
-    }
+  .container {
+    overflow: hidden;
   }
+  
 
-  @media (min-width: 388px) and (max-width: 767px) {
-    .container{
-      overflow: visible;
-     
-    }
+  @media (min-width: 401px) and (max-width: 767px) {
+   
     .hero{
       width: 320px;
       margin-left: auto;
@@ -18,9 +14,9 @@
 
   }
 
-  .hero-section {
-    background-color: #ffb8ca;
-  }
+  // .hero-section {
+  //   background-color: #ffb8ca;
+  // }
   // .container {
   //   overflow: hidden;
   // }
@@ -85,6 +81,7 @@
     padding-right: 14px;
     border-radius: 20px;
     border: 0px;
+    box-shadow: 0px 4px 4px #FEA5BB;
     @include centered;
     color: #ffffff;
     background: #d41443;
@@ -105,6 +102,7 @@
     padding-right: 14px;
     border-radius: 20px;
     border: 0px;
+    box-shadow: 0px 4px 4px #FEA5BB;
     @include centered;
     color: #d41443;
     background: #ffffff;
@@ -156,9 +154,9 @@
 }
 // -------------------------Tablet------------------------------
 @media (min-width: 768px) and (max-width: 1279px) {
-  .hero-section {
-    background-color: #ffb8ca;
-  }
+  // .hero-section {
+  //   background-color: #ffb8ca;
+  // }
   .conteiner {
     width: 1280px;
     margin-left: 15px;
@@ -222,6 +220,7 @@
     padding-right: 15px;
     border-radius: 20px;
     border: 0px;
+    box-shadow: 0px 4px 4px #FEA5BB;
     @include centered;
     color: #ffffff;
     background: #d41443;
@@ -242,6 +241,7 @@
     padding-right: 15px;
     border-radius: 20px;
     border: 0px;
+    box-shadow: 0px 4px 4px #FEA5BB;
     @include centered;
     color: #d41443;
     background: #ffffff;
@@ -360,7 +360,8 @@
 
   .elipse {
     position: relative;
-    top: -57px;
+    top: -59px;
+    right: -15px;
     z-index: 0;
     margin-left: 106px;
     display: block;
@@ -372,7 +373,7 @@
   .hero__main-img {
     position: absolute;
     left: +20%;
-    bottom: -57px;
+    bottom: -59px;
   }
   .box-elipse {
     margin-left: 87px;
@@ -383,7 +384,7 @@
   .hero__iceCreamGirl-img {
     position: absolute;
     right: -28%;
-    bottom: -57px;
+    bottom: -59px;
     width: 168px;
     height: 133px;
     display: block;
@@ -393,9 +394,9 @@
 }
 // ------------------------------Des-------------------------------
 @media (min-width: 1280px) {
-  .hero-section {
-    background-color: #ffb8ca;
-  }
+  // .hero-section {
+  //   background-color: #ffb8ca;
+  // }
 
   .hero {
     display: flex;
@@ -410,7 +411,7 @@
 
    .basic-content{
      position: relative;
-     left: 45px;
+     left: 40px;
      top: 0;
    }
 
@@ -459,6 +460,7 @@
     padding-bottom: 15px;
     padding-left: 20px;
     padding-right: 20px;
+    box-shadow: 0px 4px 4px #FEA5BB;
     @include centered;
     color: #ffffff;
     background: #d41443;
@@ -479,6 +481,7 @@
     padding-bottom: 15px;
     padding-left: 20px;
     padding-right: 20px;
+    box-shadow: 0px 4px 4px #FEA5BB;
     @include centered;
     color: #d41443;
     background: #ffffff;
@@ -590,7 +593,7 @@
   .box-tex {
     position: absolute;
     right: -35%;
-    bottom: +10%;
+    bottom: +12%;
     min-width: 190px;
   }
 
@@ -598,8 +601,8 @@
 
   .elipse {
     position: relative;
-    top: -49px;
-    left: +12%;
+    top: -45px;
+    left: +8%;
     z-index: 0;
     display: block;
     min-width: 538px;
@@ -609,14 +612,14 @@
   }
   .hero__main-img {
     position: absolute;
-    bottom: -63px;
+    bottom: -59px;
     left: 23%;
   }
   .hero__iceCreamGirl-img {
     position: absolute;
 
-    bottom: -63px;
+    bottom: -59px;
 
-    left: 80%;
+    left: 77%;
   }
 }
