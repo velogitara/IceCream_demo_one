@@ -1,21 +1,19 @@
 @include respond-to(mobile-only) {
-  @media   (max-width: 387px){
+  @media (max-width: 387px) {
     .container {
       overflow: hidden;
     }
   }
 
   @media (min-width: 388px) and (max-width: 767px) {
-    .container{
+    .container {
       overflow: visible;
-     
     }
-    .hero{
+    .hero {
       width: 320px;
       margin-left: auto;
       margin-right: auto;
     }
-
   }
 
   .hero-section {
@@ -53,8 +51,8 @@
     font-family: Titan One;
     font-style: normal;
     font-weight: normal;
-    font-size:48px; 
-    line-height:0.96;
+    font-size: 48px;
+    line-height: 0.96;
     text-align: center;
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -133,19 +131,18 @@
     width: 171px;
     height: 410px;
     display: block;
-    animation-name:opacity;
+    animation-name: opacity;
     animation-duration: 3000ms;
     animation-timing-function: linear;
-   
-     
-    
-       
-     }
-   
-   @keyframes opacity{
-       from { opacity: 0; }
-       to   { opacity: 1; }
-        
+  }
+
+  @keyframes opacity {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
   .hero__button-arrow {
@@ -268,7 +265,6 @@
   .box-secodary {
     display: flex;
     align-items: center;
-    
   }
 
   .hero__text {
@@ -281,8 +277,6 @@
   }
 
   // белые 2 эллипса и цифры
-
-  
 
   .white-elipse-first {
     display: block;
@@ -350,10 +344,10 @@
     background: #ffffff;
     @include transit(transform);
     &:hover {
-      transform: scale(1.3);}
-    } 
+      transform: scale(1.3);
+    }
+  }
 
-    
   .hero__svg {
     fill: currentColor;
     width: 5px;
@@ -361,7 +355,6 @@
   }
 
   .hero__bottle-img {
-   
     margin-top: 19px;
     margin-right: 0px;
   }
@@ -378,36 +371,39 @@
     background-color: #ffa5ba;
   }
 
-
-
-  .hero__bottle-img{
-    animation-name:opacity;
+  .hero__bottle-img {
+    animation-name: opacity;
     animation-duration: 3000ms;
     animation-timing-function: linear;
-    animation-delay : 3000ms;
-    }
-  
-  @keyframes opacity{
-      from { opacity: 0; }
-      to   { opacity: 1; }
-       }
+    animation-delay: 3000ms;
+  }
 
+  @keyframes opacity {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
   .hero__main-img {
     position: absolute;
     left: +20%;
 
     bottom: -59px;
-    animation-name:opacity;
+    animation-name: opacity;
     animation-duration: 5000ms;
     animation-timing-function: linear;
-    }
-   
-   @keyframes opacity{
-       from { opacity: 0; }
-       to   { opacity: 1; }
-        
+  }
 
+  @keyframes opacity {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
   .box-elipse {
     margin-left: 87px;
@@ -424,20 +420,20 @@
     display: block;
     max-width: 100%;
     height: auto;
-    animation-name:opacity;
+    animation-name: opacity;
     animation-duration: 3000ms;
     animation-timing-function: linear;
-    animation-delay : 3000ms;
-     
-    
-       
-     }
-   
-   @keyframes opacity{
-       from { opacity: 0; }
-       to   { opacity: 1; }
-        }
-  
+    animation-delay: 3000ms;
+  }
+
+  @keyframes opacity {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
 // ------------------------------Des-------------------------------
 @media (min-width: 1280px) {
@@ -456,11 +452,11 @@
     // margin-right: 83px;
   }
 
-   .basic-content{
-     position: relative;
-     left: 45px;
-     top: 0;
-   }
+  .basic-content {
+    position: relative;
+    left: 45px;
+    top: 0;
+  }
 
   .hero__title {
     font-family: Titan One;
@@ -567,7 +563,8 @@
     background: #ffffff;
     @include transit(transform);
     &:hover {
-      transform: scale(1.3);}
+      transform: scale(1.3);
+    }
   }
 
   .hero__svg {
@@ -582,7 +579,6 @@
     margin-left: 220px;
     margin-right: auto;
     padding-top: 40px;
-    
   }
   .white-elipse-first {
     display: block;
@@ -660,47 +656,49 @@
     bottom: -63px;
     left: 23%;
     animation: opacity 5000ms;
-    }
+  }
   @keyframes opacity {
-      from { opacity: 0; }
-      to   { opacity: 1; }
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
-
-  .hero__bottle-img{
-    animation-name:opacity;
+  .hero__bottle-img {
+    animation-name: opacity;
     animation-duration: 3000ms;
     animation-timing-function: linear;
-    animation-delay : 3000ms;
+    animation-delay: 3000ms;
+  }
+
+  @keyframes opacity {
+    from {
+      opacity: 0;
     }
-  
-  @keyframes opacity{
-      from { opacity: 0; }
-      to   { opacity: 1; }
-       }
-
-
+    to {
+      opacity: 1;
+    }
+  }
 
   .hero__iceCreamGirl-img {
-   position: absolute;
-   bottom: -59px;
-   left: 77%;
-   
-   animation-name:opacity;
-   animation-duration: 3000ms;
-   animation-timing-function: linear;
-   animation-delay : 3000ms;
-    
-   
-      
+    position: absolute;
+    bottom: -59px;
+    left: 77%;
+
+    animation-name: opacity;
+    animation-duration: 3000ms;
+    animation-timing-function: linear;
+    animation-delay: 3000ms;
+  }
+
+  @keyframes opacity {
+    from {
+      opacity: 0;
     }
-  
-  @keyframes opacity{
-      from { opacity: 0; }
-      to   { opacity: 1; }
-       }
-    
-  
-
-  
-
+    to {
+      opacity: 1;
+    }
+  }
+}

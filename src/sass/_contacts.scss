@@ -58,16 +58,16 @@
   }
 
   flex-basis: calc((100% - 62px) / 3);
-}
-&:not(:last-child) {
-  @include respond-to(mobile-only) {
-    margin-bottom: 20px;
-  }
-  @include respond-to(tablet) {
-    margin-right: 20px;
-  }
-  @include respond-to(desktop) {
-    margin-right: 31px;
+  &:not(:last-child) {
+    @include respond-to(mobile-only) {
+      margin-bottom: 20px;
+    }
+    @include respond-to(tablet) {
+      margin-right: 20px;
+    }
+    @include respond-to(desktop) {
+      margin-right: 31px;
+    }
   }
 }
 
