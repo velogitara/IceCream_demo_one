@@ -102,3 +102,27 @@ a {
 
   cursor: pointer;
 }
+
+#upbutton {
+  background: url('../images/topButton.svg') no-repeat top left;
+
+  background-size: 30px;
+  background-position: 50%;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+  display: none;
+  position: fixed;
+  z-index: 999;
+
+  &:hover {
+    background-color: $bg-button-hover;
+    box-shadow: 0px 4px 4px #fea5bb;
+  }
+  &:active {
+    background-color: $font-grey;
+  }
+}
