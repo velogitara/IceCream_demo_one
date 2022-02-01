@@ -1,10 +1,25 @@
 @include respond-to(mobile-only) {
-  .hero-section {
-    background-color: #ffb8ca;
-  }
   .container {
     overflow: hidden;
   }
+  
+
+  @media (min-width: 401px) and (max-width: 767px) {
+   
+    .hero{
+      width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+  }
+
+  // .hero-section {
+  //   background-color: #ffb8ca;
+  // }
+  // .container {
+  //   overflow: hidden;
+  // }
   .hero {
     position: relative;
     padding-top: 27px;
@@ -57,6 +72,7 @@
 
   // основные кнопки
   .hero__button-Products {
+    cursor: pointer;
     font-size: 8px;
     line-height: 10px;
     padding-top: 7px;
@@ -65,6 +81,7 @@
     padding-right: 14px;
     border-radius: 20px;
     border: 0px;
+    box-shadow: 0px 4px 4px #FEA5BB;
     @include centered;
     color: #ffffff;
     background: #d41443;
@@ -76,6 +93,7 @@
   }
 
   .hero__button {
+    cursor: pointer;
     font-size: 8px;
     line-height: 10px;
     padding-top: 7px;
@@ -84,6 +102,7 @@
     padding-right: 14px;
     border-radius: 20px;
     border: 0px;
+    box-shadow: 0px 4px 4px #FEA5BB;
     @include centered;
     color: #d41443;
     background: #ffffff;
@@ -135,9 +154,9 @@
 }
 // -------------------------Tablet------------------------------
 @media (min-width: 768px) and (max-width: 1279px) {
-  .hero-section {
-    background-color: #ffb8ca;
-  }
+  // .hero-section {
+  //   background-color: #ffb8ca;
+  // }
   .conteiner {
     width: 1280px;
     margin-left: 15px;
@@ -192,6 +211,7 @@
     margin-left: 8px;
   }
   .hero__button-Products {
+    cursor: pointer;
     font-size: 8px;
     line-height: 10px;
     padding-top: 7px;
@@ -200,6 +220,7 @@
     padding-right: 15px;
     border-radius: 20px;
     border: 0px;
+    box-shadow: 0px 4px 4px #FEA5BB;
     @include centered;
     color: #ffffff;
     background: #d41443;
@@ -211,6 +232,7 @@
   }
 
   .hero__button {
+    cursor: pointer;
     font-size: 8px;
     line-height: 10px;
     padding-top: 7px;
@@ -219,6 +241,7 @@
     padding-right: 15px;
     border-radius: 20px;
     border: 0px;
+    box-shadow: 0px 4px 4px #FEA5BB;
     @include centered;
     color: #d41443;
     background: #ffffff;
@@ -308,6 +331,7 @@
   }
 
   .hero__button-arrow {
+    cursor: pointer;
     width: 18px;
     height: 18px;
     border-radius: 50%;
@@ -336,7 +360,8 @@
 
   .elipse {
     position: relative;
-    top: -57px;
+    top: -59px;
+    right: -15px;
     z-index: 0;
     margin-left: 106px;
     display: block;
@@ -348,7 +373,7 @@
   .hero__main-img {
     position: absolute;
     left: +20%;
-    bottom: -57px;
+    bottom: -59px;
   }
   .box-elipse {
     margin-left: 87px;
@@ -359,7 +384,7 @@
   .hero__iceCreamGirl-img {
     position: absolute;
     right: -28%;
-    bottom: -57px;
+    bottom: -59px;
     width: 168px;
     height: 133px;
     display: block;
@@ -369,9 +394,9 @@
 }
 // ------------------------------Des-------------------------------
 @media (min-width: 1280px) {
-  .hero-section {
-    background-color: #ffb8ca;
-  }
+  // .hero-section {
+  //   background-color: #ffb8ca;
+  // }
 
   .hero {
     display: flex;
@@ -381,8 +406,15 @@
 
     padding-top: 42px;
     padding-bottom: 56px;
-    margin-right: 83px;
+    // margin-right: 83px;
   }
+
+   .basic-content{
+     position: relative;
+     left: 40px;
+     top: 0;
+   }
+
   .hero__title {
     font-family: Titan One;
     font-style: normal;
@@ -419,6 +451,7 @@
   }
 
   .hero__button-Products {
+    cursor: pointer;
     font-size: 14px;
     line-height: 18px;
     border-radius: 20px;
@@ -427,6 +460,7 @@
     padding-bottom: 15px;
     padding-left: 20px;
     padding-right: 20px;
+    box-shadow: 0px 4px 4px #FEA5BB;
     @include centered;
     color: #ffffff;
     background: #d41443;
@@ -438,6 +472,7 @@
   }
 
   .hero__button {
+    cursor: pointer;
     font-size: 14px;
     line-height: 18px;
     border-radius: 20px;
@@ -446,6 +481,7 @@
     padding-bottom: 15px;
     padding-left: 20px;
     padding-right: 20px;
+    box-shadow: 0px 4px 4px #FEA5BB;
     @include centered;
     color: #d41443;
     background: #ffffff;
@@ -475,6 +511,7 @@
   }
 
   .hero__button-arrow {
+    cursor: pointer;
     width: 26px;
     height: 26px;
     border-radius: 50%;
@@ -497,10 +534,10 @@
   // белые 2 эллипса и цифры
 
   .box-elipse {
-    margin-left: 140px;
+    margin-left: 220px;
     margin-right: auto;
     padding-top: 40px;
-    // padding-bottom: px;
+    
   }
   .white-elipse-first {
     display: block;
@@ -520,6 +557,8 @@
 
   .white-elipse-first {
     position: relative;
+    // right: 0;
+    // bottom: 0;
   }
   .white-elipse-second {
     position: relative;
@@ -553,18 +592,18 @@
 
   .box-tex {
     position: absolute;
-    right: -30%;
-    bottom: +10%;
+    right: -35%;
+    bottom: +12%;
     min-width: 190px;
   }
 
-  // картинки
+  //---- картинки-----
 
   .elipse {
     position: relative;
-    top: -70px;
+    top: -45px;
+    left: +8%;
     z-index: 0;
-
     display: block;
     min-width: 538px;
     height: 538px;
@@ -573,14 +612,14 @@
   }
   .hero__main-img {
     position: absolute;
-    bottom: -84px;
+    bottom: -59px;
     left: 23%;
   }
   .hero__iceCreamGirl-img {
     position: absolute;
 
-    bottom: -84px;
+    bottom: -59px;
 
-    left: 80%;
+    left: 77%;
   }
 }

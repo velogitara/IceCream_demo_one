@@ -27,8 +27,6 @@
   }
 
   &__item {
-    padding-top: 50px;
-
     margin-bottom: 38px;
   }
 
@@ -43,6 +41,10 @@
     background-color: $bg-section-secondary;
   }
 
+  &__item-title::before {
+    margin-bottom: 16px;
+  }
+
   &__item:nth-child(1) &__item-title::before {
     content: ' ';
 
@@ -54,9 +56,7 @@
     width: 33px;
     height: 50px;
 
-    position: absolute;
-
-    top: -66px;
+    display: block;
 
     @media (min-resolution: 2dppx) {
       background-image: url(../images/advantages/mobile00_2x.png);
@@ -74,9 +74,7 @@
     width: 50px;
     height: 50px;
 
-    top: -66px;
-
-    position: absolute;
+    display: block;
 
     @media (min-resolution: 2dppx) {
       background-image: url(../images/advantages/mobile01_2x.png);
@@ -94,9 +92,7 @@
     width: 44px;
     height: 50px;
 
-    top: -66px;
-
-    position: absolute;
+    display: block;
 
     @media (min-resolution: 2dppx) {
       background-image: url(../images/advantages/mobile02_2x.png);
@@ -136,6 +132,10 @@
     &__item-description {
       font-size: 14px;
       line-height: 174%;
+    }
+
+    &__item-title::before {
+      margin-bottom: 36px;
     }
 
     &__item:nth-child(1) &__item-title::before {
@@ -192,6 +192,10 @@
     &__item-description {
       font-size: 16px;
       line-height: 176%;
+    }
+
+    &__item-title::before {
+      margin-bottom: 40px;
     }
 
     &__item:nth-child(1) &__item-title::before {
