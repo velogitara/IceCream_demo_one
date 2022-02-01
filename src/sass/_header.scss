@@ -21,7 +21,8 @@
 }
 
 .logo {
-  margin-right: 110px;
+  width: 199px;
+  height: 50px;
 }
 
 .menu-button {
@@ -100,12 +101,14 @@
 
 .menu-container {
   @include respond-to(tablet-only) {
-    display: none;
+    position: absolute;
     overflow: hidden;
     top: 0;
-    right: -100%;
+    right: 0;
+    width: 100%;
     height: 100%;
-    @include transit(right);
+    transform: translateY(-100%);
+    @include transit(transform);
 
     &.is-open {
       display: block;
@@ -113,6 +116,8 @@
       background-color: $bg-menu;
       right: 0;
       z-index: 20;
+      height: 100%;
+      transform: translateY(0);
     }
   }
 
@@ -129,7 +134,10 @@
     z-index: 1;
     display: flex;
     flex-direction: row-reverse;
-    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: auto;
   }
 }
 
@@ -137,14 +145,15 @@
   width: 209px;
   margin-bottom: 20px;
   margin-top: 60px;
-  margin-left: 110px;
   margin-right: auto;
+  margin-left: auto;
 
   @include transit(background-color);
 
   &:hover,
   &:focus {
     background-color: $bg-button-hover;
+    box-shadow: 0px 4px 4px $font-accent;
   }
 
   @include respond-to(tablet) {
@@ -154,6 +163,7 @@
   @include respond-to(desktop) {
     width: 160px;
     height: 44px;
+    margin-left: 110px;
     margin-bottom: 0;
     margin-top: 0;
     margin-right: 0;
@@ -186,6 +196,7 @@
     &:hover,
     &:focus {
       background-color: $bg-button-hover;
+      box-shadow: 0px 4px 4px #fea5bb;
     }
 
     .button__text,
@@ -201,6 +212,10 @@
 
     .button__sign {
       margin-left: 12px;
+    }
+
+    .menu-container.is-open + & {
+      display: none;
     }
   }
 }
