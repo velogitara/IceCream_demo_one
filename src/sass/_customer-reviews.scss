@@ -96,23 +96,6 @@
   text-align: center;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-  opacity: 0;
-  position: absolute;
-  width: 33.33%;
-  height: 50%;
-  top: 50%;
-}
-
-.swiper-button-next {
-  transform: translate(50%, -50%);
-}
-
-.swiper-button-prev {
-  transform: translate(-50%, -50%);
-}
-
 @media screen and (min-width: 768px) {
   .customer-reviews__container {
     padding: 60px 74px;
