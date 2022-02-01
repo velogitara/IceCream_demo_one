@@ -74,23 +74,24 @@
     position: absolute;
     background-image: url(/images/products/products-3dots.svg);
     background-size: 26px 6px;
-    top: 44%;
+    top: 215px;
     left: 50%;
 
     transform: translate(-50%, -50%);
 
     width: 26px;
     height: 6px;
-  }
-  @media screen and (min-width: 768px) {
-    top: 205px;
-  }
-  @media screen and (min-width: 1280px) {
-    font-size: 30px;
-    line-height: 1.13;
-    margin-bottom: 70px;
 
-    top: 229px;
+    @media screen and (min-width: 768px) {
+      top: 205px;
+    }
+    @media screen and (min-width: 1280px) {
+      font-size: 30px;
+      line-height: 1.13;
+      margin-bottom: 70px;
+
+      top: 229px;
+    }
   }
 }
 
@@ -251,18 +252,20 @@
 
   margin-bottom: 30px;
 
+  overflow: hidden;
+  height: 248px;
+
   color: $font-white;
 
   @media screen and (min-width: 768px) {
-    height: 124px;
-    overflow: hidden;
+    // height: 124px;
     line-height: 1.76;
 
     margin-bottom: 40px;
   }
 
   @media screen and (min-width: 1280px) {
-    height: 106px;
+    // height: 106px;
 
     margin-bottom: 62px;
 
