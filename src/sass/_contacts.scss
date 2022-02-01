@@ -1,23 +1,21 @@
 .contacts-section {
-  background-image: linear-gradient(to bottom, #fff 5%, #fff5f6 5%, #fff5f6);
+  position: relative;
 
+  background-image: linear-gradient(to bottom, #fff 5%, #fff5f6 5%, #fff5f6);
+  padding: 42px 0;
   @include respond-to(tablet) {
     background-image: linear-gradient(to bottom, #fff 10%, #fff5f6 10%, #fff5f6);
+    padding: 42px 0 72px;
   }
 
   @include respond-to(desktop) {
     background-image: url(../images/contacts/spots.png),
-      linear-gradient(to bottom, #fff 25%, #fff5f6 15%, #fff5f6);
-    background-color: #ffffff;
+      linear-gradient(to bottom, #fff 20%, #fff5f6 20%, #fff5f6);
 
     background-repeat: no-repeat;
     background-size: contain 80%;
     background-position: center;
-
-    width: 100%;
-
     padding: 72px 0;
-
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: linear-gradient(to bottom, #fff 10%, #fff5f6 10%, #fff5f6),
         url(../images/contacts/spots@2x.png);
@@ -25,9 +23,17 @@
   }
 }
 
-.title-hidden {
-  visibility: hidden;
-  margin: 0;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .contacts-container {
@@ -35,51 +41,68 @@
 }
 
 .contacts__card-set {
+  margin: 0 auto;
+  margin-bottom: 54px;
+
   @include respond-to(tablet) {
     display: flex;
-    width: auto;
+
+    margin-bottom: 81px;
+  }
+
+  @include respond-to(desktop) {
+    margin-bottom: 86px;
+  }
+}
+.contacts__set-item {
+  @media (max-width: 479px) {
+    max-width: 380px;
+  }
+
+  @include respond-to(mobile) {
+    width: 380px;
+  }
+  @include respond-to(tablet) {
     flex-basis: calc((100% - 40px) / 3);
   }
 
   @include respond-to(desktop) {
-    width: auto;
-    margin-bottom: 81px;
+    flex-basis: calc((100% - 62px) / 3);
+  }
+  &:not(:last-child) {
+    @include respond-to(mobile-only) {
+      margin-bottom: 20px;
+    }
+    @include respond-to(tablet) {
+      margin-right: 20px;
+    }
+    @include respond-to(desktop) {
+      margin-right: 31px;
+    }
   }
 }
 .contacts__card {
   background: #ffffff;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
+  margin: 0 auto;
+  padding: 43px 18px;
 
-  @include respond-to(mobile-only) {
-    width: auto;
-    padding-top: 43px;
-    padding-bottom: 43px;
-    padding-left: 50px;
-    padding-right: 50px;
+  position: relative;
 
-    position: relative;
-
-    &:not(:last-child) {
-      margin-bottom: 20px;
-    }
-  }
+  // @include respond-to(mobile) {
+  //   width: 220px;
+  //   // text-align: center;
+  //   margin: 0 auto;
+  // }
 
   @include respond-to(tablet) {
-    padding-left: 35px;
-    padding-right: 35px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
+    padding: 50px 32px;
+    width: auto;
   }
-
   @include respond-to(desktop) {
-    // &:not(:last-child) {
-    //   margin-right: 31px;
-    flex-basis: calc((100% - 62px) / 3);
+    padding: 51px 43px 62px;
+    width: auto;
   }
 }
 .contacts-card_item {
@@ -103,7 +126,7 @@
   margin-bottom: 25px;
 }
 
-.contacts__place-backgrpund {
+.contacts__place-background {
   background-color: $bg-content-third;
   width: 130px;
 }
@@ -145,7 +168,7 @@
 }
 
 .contacs_space {
-  @include respond-to(mobile) {
+  @include respond-to(mobile-only) {
     padding-top: 25px;
   }
 }
@@ -190,36 +213,28 @@
 // Кнопки
 
 .contact__buttons-list {
-  display: flex;
+  @include centered;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
-  margin-top: 54px;
-  margin-left: 60px;
-  margin-right: auto;
-  margin-left: auto;
-
-  @include respond-to(mobile) {
-    padging-bottom: 60px;
-  }
+  margin: 0 auto 60px;
 
   @include respond-to(tablet) {
     flex-direction: row;
+    margin-bottom: 80px;
   }
 }
 
-.btn-primary__width {
-  min-width: 161px;
-  margin-bottom: 10px;
-
-  @include respond-to(tablet) {
-    width: 191px;
-  }
-  @include respond-to(desktop) {
-    width: 198px;
+.contacts__button-item {
+  &:not(:last-child) {
+    @include respond-to(mobile-only) {
+      margin-bottom: 10px;
+    }
+    @include respond-to(tablet) {
+      margin-right: 15px;
+    }
   }
 }
+
 .btn-icon {
   fill: none;
   margin-left: 15px;
@@ -230,6 +245,7 @@
   padding-top: 10px;
 
   height: 44px;
+  min-width: 161px;
 
   font-family: inherit;
   @include text(16px, 1.31, 700);
@@ -245,61 +261,26 @@
   align-items: baseline;
   justify-content: center;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transit(box-shadow, background-color);
 
   @include respond-to(tablet) {
-    margin-right: 15px;
-    min-width: 191;
-
-    margin-bottom: 81px;
+    min-width: 191px;
   }
 
   @include respond-to(desktop) {
-    margin-right: 15px;
-    min-width: 198;
+    min-width: 198px;
   }
 }
 
 .btn-secondary-contacts {
-  @include centered;
-  padding-top: 10px;
+  @extend .btn-primary-contacts;
 
-  height: 44px;
-
-  font-family: inherit;
-  @include text(16px, 1.31, 700);
   color: $bg-button-first;
-
   background-color: $bg-button-second;
-
-  border-radius: 22px;
-  border-color: transparent;
-
-  cursor: pointer;
-
-  align-items: baseline;
-  justify-content: center;
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  @include respond-to(tablet) {
-    margin-right: 15px;
-    min-width: 191;
-
-    margin-bottom: 81px;
-  }
-
-  @include respond-to(desktop) {
-    margin-right: 15px;
-    min-width: 198;
-  }
 }
 
 .btn-secondary-contacts:hover,
-.btn-secondary-contacts:active {
-  box-shadow: 0px 4px 4px #fea5bb;
-}
-
+.btn-secondary-contacts:active,
 .btn-primary-contacts:hover,
 .btn-primary-contacts:active {
   box-shadow: 0px 4px 4px #fea5bb;
