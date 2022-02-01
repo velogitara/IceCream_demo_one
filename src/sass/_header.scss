@@ -1,3 +1,4 @@
+.hero-header-section{background-color: $bg-hero;}
 .pageheader {
   position: relative;
   display: flex;
@@ -6,7 +7,7 @@
   padding-top: 6px;
   padding-bottom: 15px;
 
-  background-color: $bg-hero;
+ 
 
   @include respond-to(tablet) {
     padding-top: 37px;
