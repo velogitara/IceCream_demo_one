@@ -106,18 +106,34 @@ a {
 #upbutton {
   background: url('../images/topButton.svg') no-repeat top left;
 
-  background-size: 30px;
+  height: 30px;
+  width: 30px;
+
+  background-size: 15px;
+
   background-position: 50%;
   border-radius: 50%;
-  height: 60px;
-  width: 60px;
-  bottom: 30px;
-  right: 30px;
+
+  bottom: 15px;
+  right: 15px;
   cursor: pointer;
   display: none;
   position: fixed;
   z-index: 999;
 
+  @include respond-to(tablet) {
+    height: 40px;
+    width: 40px;
+
+    background-size: 20px;
+    bottom: 30px;
+    right: 30px;
+  }
+  @include respond-to(desktop) {
+    background-size: 30px;
+    height: 60px;
+    width: 60px;
+  }
   &:hover {
     background-color: $bg-button-hover;
     box-shadow: 0px 4px 4px #fea5bb;
