@@ -208,7 +208,7 @@
   background-color: $bg-button-second;
   color: $font-white;
 
-  @include transit(background-color, color, box-shadow);
+  @include transit(background-color, color);
   @include respond-to(tablet-only) {
     margin-top: 15px;
   }
@@ -216,6 +216,5 @@
   &:focus {
     background-color: $bg-hero;
     color: $font-accent;
-    box-shadow: 0px 4px 4px #fea5bb;
   }
 }

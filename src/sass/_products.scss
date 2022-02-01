@@ -44,15 +44,17 @@
 .products__title {
   margin-bottom: 138px;
 
+  //   @media screen and (min-width: 768px) {
+  //     margin-bottom: 138px;
+  //   }
+
   @media screen and (min-width: 1280px) {
     margin-bottom: 226px;
   }
 }
-
 .products__list {
   @media screen and (min-width: 768px) {
     display: flex;
-    align-items: flex-start;
   }
 }
 .products__subtitle {
@@ -72,24 +74,23 @@
     position: absolute;
     background-image: url(/images/products/products-3dots.svg);
     background-size: 26px 6px;
-    top: 215px;
+    top: 44%;
     left: 50%;
 
     transform: translate(-50%, -50%);
 
     width: 26px;
     height: 6px;
+  }
+  @media screen and (min-width: 768px) {
+    top: 205px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 30px;
+    line-height: 1.13;
+    margin-bottom: 70px;
 
-    @media screen and (min-width: 768px) {
-      top: 205px;
-    }
-    @media screen and (min-width: 1280px) {
-      font-size: 30px;
-      line-height: 1.13;
-      margin-bottom: 70px;
-
-      top: 229px;
-    }
+    top: 229px;
   }
 }
 
@@ -245,30 +246,27 @@
 .products__text {
   font-weight: bold;
   font-size: 14px;
-  line-height: 1.3;
+  line-height: 1.52;
   letter-spacing: 0.04em;
 
   margin-bottom: 30px;
 
-  overflow: hidden;
-  height: 248px;
-
   color: $font-white;
 
   @media screen and (min-width: 768px) {
-    // height: 124px;
+    height: 124px;
+    overflow: hidden;
     line-height: 1.76;
 
     margin-bottom: 40px;
   }
 
   @media screen and (min-width: 1280px) {
-    // height: 106px;
+    height: 106px;
 
     margin-bottom: 62px;
 
-    font-size: 15px;
-    line-height: 1.4;
+    font-size: 16px;
   }
 }
 
