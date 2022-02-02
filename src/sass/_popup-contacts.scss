@@ -6,6 +6,7 @@
   left: 0;
   opacity: 0;
   visibility: hidden;
+  z-index: 5;
 
   background: rgba(40, 1, 1, 0.3);
 
@@ -43,8 +44,8 @@
     font-family: $font-title;
     margin-bottom: 30px;
   }
-  &__content {
-  }
+  // &__content {
+  // }
   &__close {
     @include centered;
 
