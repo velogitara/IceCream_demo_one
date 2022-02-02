@@ -1,14 +1,18 @@
 <div id="popup" class="popup">
   <div class="popup__body">
     <div class="popup__content">
-      <a href="" class="popup__close"></a>
+      <a href="#contacts" class="popup__close"
+        ><svg class="modal__cross" width="11px" height="11px">
+          <use href="/images/spriteNata.svg#cross"></use>
+        </svg>
+      </a>
+      <p class="popup__content-title">Our locations</p>
       <ul class="popup__map-list">
         <li class="popup__location">
           <p class="popup__title">Chicago</p>
           <div style="width: 100%">
             <iframe
-              width="720"
-              height="600"
+              class="popup__map-size"
               frameborder="0"
               scrolling="no"
               marginheight="0"
@@ -22,8 +26,7 @@
           <p class="popup__title">New-York</p>
           <div class="popup__map" style="width: 100%">
             <iframe
-              width="720"
-              height="600"
+              class="popup__map-size"
               frameborder="0"
               scrolling="no"
               marginheight="0"
