@@ -1,4 +1,6 @@
-.hero-header-section{background-color: $bg-hero;}
+.hero-header-section {
+  background-color: $bg-hero;
+}
 .pageheader {
   position: relative;
   display: flex;
@@ -6,8 +8,6 @@
   align-items: center;
   padding-top: 6px;
   padding-bottom: 15px;
-
- 
 
   @include respond-to(tablet) {
     padding-top: 37px;
@@ -149,12 +149,12 @@
   margin-right: auto;
   margin-left: auto;
 
-  @include transit(background-color);
+  @include transit(background-color, box-shadow);
 
   &:hover,
   &:focus {
     background-color: $bg-button-hover;
-    box-shadow: 0px 4px 4px $font-accent;
+    box-shadow: 0px 4px 4px #fea5bb;
   }
 
   @include respond-to(tablet) {
@@ -197,7 +197,6 @@
     &:hover,
     &:focus {
       background-color: $bg-button-hover;
-      box-shadow: 0px 4px 4px #fea5bb;
     }
 
     .button__text,
