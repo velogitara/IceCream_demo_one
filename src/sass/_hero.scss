@@ -130,6 +130,18 @@
     width: 171px;
     height: 410px;
     display: block;
+    animation-name: opacity;
+    animation-duration: 3000ms;
+    animation-timing-function: linear;
+  }
+
+  @keyframes opacity {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
   .hero__button-arrow {
@@ -269,13 +281,6 @@
 
   // белые 2 эллипса и цифры
 
-  // .box-elipse{
-  //   margin-left: px;
-  //   margin-right: auto;
-  //   padding-top: px;
-  //   padding-bottom: px;
-  // }
-
   .white-elipse-first {
     display: block;
     width: 16px;
@@ -320,6 +325,7 @@
     right: -55px;
     bottom: +11%;
   }
+
   .box__text {
     font-family: DM Sans;
     font-style: normal;
@@ -369,10 +375,40 @@
     border-radius: 50%;
     background-color: #ffa5ba;
   }
+
+  .hero__bottle-img {
+    animation-name: opacity;
+    animation-duration: 1000ms;
+    animation-timing-function: linear;
+    animation-delay: 1000ms;
+    animation-fill-mode: backwards;
+  }
+
+  @keyframes opacity {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
   .hero__main-img {
     position: absolute;
     left: +20%;
     bottom: -59px;
+    animation-name: opacity;
+    animation-duration: 5000ms;
+    animation-timing-function: linear;
+  }
+
+  @keyframes opacity {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
   .box-elipse {
     margin-left: 87px;
@@ -389,6 +425,20 @@
     display: block;
     max-width: 100%;
     height: auto;
+    animation-name: opacity;
+    animation-duration: 1000ms;
+    animation-timing-function: linear;
+    animation-delay: 2000ms;
+    animation-fill-mode: backwards;
+  }
+
+  @keyframes opacity {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 }
 // ------------------------------Des-------------------------------
@@ -459,6 +509,7 @@
     padding-bottom: 15px;
     padding-left: 20px;
     padding-right: 20px;
+
     @include centered;
     color: #ffffff;
     background: #d41443;
@@ -614,12 +665,52 @@
     position: absolute;
     bottom: -59px;
     left: 23%;
+    animation: opacity 5000ms;
   }
+  @keyframes opacity {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .hero__bottle-img {
+    animation-name: opacity;
+    animation-duration: 1000ms;
+    animation-timing-function: linear;
+    animation-delay: 1000ms;
+    animation-fill-mode: backwards;
+  }
+
+  @keyframes opacity {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
   .hero__iceCreamGirl-img {
     position: absolute;
-
     bottom: -59px;
-
     left: 77%;
+
+    animation-name: opacity;
+    animation-duration: 1000ms;
+    animation-timing-function: linear;
+    animation-delay: 2000ms;
+    animation-fill-mode: backwards;
+  }
+
+  @keyframes opacity {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 }

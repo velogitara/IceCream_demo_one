@@ -1,0 +1,31 @@
+<div data-buy class="backdrop is-hidden backdrop__buynow">
+  <div class="modal__buynow">
+    <button class="modal__close" data-buy-close>
+      <svg class="modal__cross" width="11px" height="11px">
+        <use href="/images/spriteNata.svg#cross"></use>
+      </svg>
+    </button>
+    <h2 class="title modal__call">Buy now</h2>
+    <form class="form form__buynow">
+        <label for="name" class="form__field">
+            <span class="form__label">Name</span>
+            <input class="form__input" type="text" name="name" id="name" autofocus required />
+        </label>
+    
+        <label for="tel" class="form__field">
+            <span class="form__label">Phone number</span>
+            <input class="form__input" type="tel" name="tel" id="tel" required />
+        </label>
+    
+        <label for="mail" class="form__field">
+            <span class="form__label">E-mail</span>
+            <input class="form__input" type="email" name="mail" id="mail" />
+        </label>
+        <label>
+            <span class="form__label">Comment</span>
+            <textarea  class="form__input form__field--textarea" name="comment" placeholder="Type a comment"></textarea>
+        </label>
+            <button class="btn-primary modal-btn" type="submit">Send</button>
+    </form>
+  </div>
+</div>

@@ -290,6 +290,7 @@
   &:hover {
     transform: scale(1.3);
   }
+  transition: transform 500ms $cubic;
 }
 
 .products__button--flex {
@@ -307,4 +308,15 @@
   .products__button:hover & {
     transform: scale(1.9);
   }
+}
+
+.products__button--pink.is-close-one {
+  transform: perspective(500px) rotateY(180deg);
+}
+
+.products__button--yellow.is-close-two {
+  transform: perspective(500px) rotateY(180deg);
+}
+.products__button--green.is-close-three {
+  transform: perspective(500px) rotateY(180deg);
 }

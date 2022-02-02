@@ -12,14 +12,4 @@ const swiper = new Swiper('.swiper', {
     clickable: true,
     dynamicBullets: true,
   },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
 });

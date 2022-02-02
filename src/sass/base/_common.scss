@@ -142,3 +142,7 @@ a {
     background-color: $font-grey;
   }
 }
+
+body.modal-open {
+  overflow: hidden;
+}

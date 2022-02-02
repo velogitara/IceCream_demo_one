@@ -1,0 +1,121 @@
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
+
+  background: rgba(40, 1, 1, 0.3);
+
+  //   z-index: 11;
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__body {
+    position: absolute;
+    top: 44px;
+    left: 50%;
+    transform: translatex(-50%);
+    background-color: $bg-section-secondary;
+    border-radius: 10px;
+    @include centered;
+    @include respond-to(mobile-only) {
+      max-width: 580px;
+      padding: 30px 40px;
+    }
+    @include respond-to(tablet) {
+      width: 680px;
+      padding: 50px 40px;
+    }
+    @include respond-to(desktop) {
+      width: 1090px;
+      padding: 30px 50px;
+    }
+  }
+  &__content-title {
+    color: $font-label;
+    @include text(28px, 1.2, 500);
+    font-family: $font-title;
+    margin-bottom: 30px;
+  }
+  // &__content {
+  // }
+  &__close {
+    @include centered;
+
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 8px;
+    right: 8px;
+
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: $bg-hero;
+    cursor: pointer;
+
+    @include transit(background-color);
+
+    &:hover,
+    &:focus {
+      background-color: $bg-button-second;
+    }
+  }
+  &__map-list {
+    @include respond-to(tablet) {
+      @include centered;
+    }
+  }
+  &__location {
+    border-radius: 15px;
+    @include respond-to(mobile-only) {
+      max-width: 380px;
+      min-height: 320px;
+    }
+    @include respond-to(tablet) {
+      flex-basis: calc((100% - 15px) / 2);
+      min-height: 320px;
+    }
+    @include respond-to(desktop) {
+      flex-basis: calc((100% - 30px) / 2);
+      min-height: 480px;
+    }
+
+    &:not(:last-child) {
+      @include respond-to(mobile-only) {
+        margin-bottom: 15px;
+      }
+      @include respond-to(tablet) {
+        margin-right: 15px;
+      }
+      @include respond-to(desktop) {
+        margin-right: 30px;
+      }
+    }
+  }
+  &__title {
+    color: $font-accent;
+    @include text(36px, 1.2, 500);
+    font-family: $font-title;
+    margin-bottom: 15px;
+  }
+}
+.popup__map-size {
+  width: 100%;
+  @include respond-to(mobile-only) {
+    min-height: 320px;
+  }
+  @include respond-to(tablet) {
+    min-height: 320px;
+  }
+  @include respond-to(desktop) {
+    min-width: 480px;
+    min-height: 480px;
+  }
+}
