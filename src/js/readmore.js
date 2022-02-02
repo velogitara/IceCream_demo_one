@@ -40,6 +40,8 @@ $('.products__button--green').click(function() {
 });
 
 
+
+
 // var halfText = $('.products__text--pink--desc').innerHeight() / 2,
 //     textHeight = $('.products__text--pink--desc').innerHeight();
 
