@@ -32,13 +32,17 @@
 
   background-origin: border-box;
   background-repeat: no-repeat;
+  /*
   background-image: url(/images/modal-about/ice-bg.jpg),
-    linear-gradient(
-      to bottom,
-      $bg-section-primary 25%,
-      $bg-section-secondary 25%,
-      $bg-section-secondary
-    );
+  
+    
+    */
+  background: linear-gradient(
+    to bottom,
+    $bg-section-primary 25%,
+    $bg-section-secondary 25%,
+    $bg-section-secondary
+  );
   background-position: bottom center;
   background-size: contain;
   width: 100%;
@@ -53,18 +57,22 @@
     );
   }
   @include respond-to(mobile) {
-    top: 30px;
+    top: 15%;
     width: 450px;
+    /*
     height: 720px;
+    */
   }
   @include respond-to(tablet) {
-    top: 50px;
+    top: 15%;
     width: 600px;
     padding: 30px 40px;
   }
   @include respond-to(desktop) {
     width: 800px;
+    /*
     height: 600px;
+    */
     top: 50%;
     transform: translate(-50%, -50%);
     background-image: linear-gradient(
@@ -131,7 +139,9 @@
   &__text-box {
     padding: 10px 0;
     @include respond-to(desktop) {
+      /*
       background-image: url(/images/modal-about/milk.png);
+      */
       background-size: 400px;
       background-position: top 50% left;
       background-repeat: no-repeat;
