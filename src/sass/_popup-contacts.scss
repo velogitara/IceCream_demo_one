@@ -107,12 +107,13 @@
   }
 }
 .popup__map-size {
-  width: 100%;
   @include respond-to(mobile-only) {
+    min-height: 320px;
     min-height: 320px;
   }
   @include respond-to(tablet) {
     min-height: 320px;
+    min-height: 480px;
   }
   @include respond-to(desktop) {
     min-width: 480px;
